@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.08216510903426791" branch-rate="0.14147286821705427" lines-covered="211" lines-valid="2568" branches-covered="73" branches-valid="516" complexity="3.2888888888888888" version="2.1.1" timestamp="1538142775408">
+<coverage line-rate="0.07983352251229663" branch-rate="0.13773584905660377" lines-covered="211" lines-valid="2643" branches-covered="73" branches-valid="530" complexity="3.3135135135135134" version="2.1.1" timestamp="1538921956333">
 	<sources>
 		<source>D:/temp/Java/ApkToolBoxGUI/target/generated-sources/annotations</source>
 		<source>--source</source>
@@ -27,6 +27,30 @@
 		</package>
 		<package name="edu.jiangxin.apktoolbox.help" line-rate="0.0" branch-rate="0.0" complexity="4.0">
 			<classes>
+				<class name="edu.jiangxin.apktoolbox.help.AboutActionListener" filename="edu/jiangxin/apktoolbox/help/AboutActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+					</lines>
+				</class>
 				<class name="edu.jiangxin.apktoolbox.help.AboutFrame" filename="edu/jiangxin/apktoolbox/help/AboutFrame.java" line-rate="0.0" branch-rate="0.0" complexity="7.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -135,33 +159,7 @@
 						<line number="72" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.help.AboutMouseListener" filename="edu/jiangxin/apktoolbox/help/AboutMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="12" hits="0" branch="false"/>
-								<line number="13" hits="0" branch="false"/>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="12" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.help.CheckUpdateMouseListener" filename="edu/jiangxin/apktoolbox/help/CheckUpdateMouseListener.java" line-rate="0.0" branch-rate="0.0" complexity="4.2">
+				<class name="edu.jiangxin.apktoolbox.help.CheckUpdateActionListener" filename="edu/jiangxin/apktoolbox/help/CheckUpdateActionListener.java" line-rate="0.0" branch-rate="0.0" complexity="4.2">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -175,95 +173,94 @@
 								<line number="37" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="41" hits="0" branch="false"/>
-								<line number="43" hits="0" branch="false"/>
-								<line number="45" hits="0" branch="false"/>
-								<line number="48" hits="0" branch="false"/>
-								<line number="49" hits="0" branch="false"/>
-								<line number="50" hits="0" branch="false"/>
-								<line number="51" hits="0" branch="false"/>
-								<line number="52" hits="0" branch="false"/>
-								<line number="54" hits="0" branch="false"/>
-								<line number="55" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="56" hits="0" branch="false"/>
-								<line number="57" hits="0" branch="false"/>
-								<line number="60" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="61" hits="0" branch="false"/>
-								<line number="63" hits="0" branch="false"/>
-								<line number="64" hits="0" branch="false"/>
-								<line number="65" hits="0" branch="false"/>
-								<line number="66" hits="0" branch="false"/>
-								<line number="67" hits="0" branch="false"/>
-								<line number="68" hits="0" branch="false"/>
-								<line number="69" hits="0" branch="false"/>
-								<line number="70" hits="0" branch="false"/>
-								<line number="71" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
 								<line number="76" hits="0" branch="false"/>
-								<line number="77" hits="0" branch="false"/>
-								<line number="78" hits="0" branch="false"/>
 								<line number="79" hits="0" branch="false"/>
 								<line number="80" hits="0" branch="false"/>
 								<line number="81" hits="0" branch="false"/>
-								<line number="82" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="82" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="83" hits="0" branch="false"/>
-								<line number="84" hits="0" branch="false"/>
-								<line number="86" hits="0" branch="false"/>
 								<line number="87" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="processException" signature="(Ljava/lang/Exception;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="90" hits="0" branch="false"/>
-								<line number="91" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
 								<line number="92" hits="0" branch="false"/>
-								<line number="93" hits="0" branch="false"/>
 								<line number="94" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="processResult" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
 								<line number="97" hits="0" branch="false"/>
 								<line number="98" hits="0" branch="false"/>
 								<line number="99" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
 								<line number="102" hits="0" branch="false"/>
-								<line number="103" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="releaseResource" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
-							<lines>
-								<line number="106" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
+								<line number="107" hits="0" branch="false"/>
 								<line number="108" hits="0" branch="false"/>
 								<line number="109" hits="0" branch="false"/>
 								<line number="110" hits="0" branch="false"/>
 								<line number="111" hits="0" branch="false"/>
+								<line number="112" hits="0" branch="false"/>
 								<line number="113" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="114" hits="0" branch="false"/>
 								<line number="115" hits="0" branch="false"/>
-								<line number="116" hits="0" branch="false"/>
 								<line number="117" hits="0" branch="false"/>
 								<line number="118" hits="0" branch="false"/>
-								<line number="120" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="processException" signature="(Ljava/lang/Exception;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="processResult" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="47" hits="0" branch="false"/>
+								<line number="48" hits="0" branch="false"/>
+								<line number="49" hits="0" branch="false"/>
+								<line number="52" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="releaseResource" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="56" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="65" hits="0" branch="false"/>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -272,93 +269,91 @@
 						<line number="35" hits="0" branch="false"/>
 						<line number="36" hits="0" branch="false"/>
 						<line number="37" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
 						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
 						<line number="43" hits="0" branch="false"/>
-						<line number="45" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
 						<line number="48" hits="0" branch="false"/>
 						<line number="49" hits="0" branch="false"/>
-						<line number="50" hits="0" branch="false"/>
-						<line number="51" hits="0" branch="false"/>
 						<line number="52" hits="0" branch="false"/>
-						<line number="54" hits="0" branch="false"/>
-						<line number="55" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="53" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="56" hits="0" branch="false"/>
-						<line number="57" hits="0" branch="false"/>
-						<line number="60" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
 						<line number="61" hits="0" branch="false"/>
-						<line number="63" hits="0" branch="false"/>
-						<line number="64" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="65" hits="0" branch="false"/>
 						<line number="66" hits="0" branch="false"/>
 						<line number="67" hits="0" branch="false"/>
 						<line number="68" hits="0" branch="false"/>
-						<line number="69" hits="0" branch="false"/>
 						<line number="70" hits="0" branch="false"/>
-						<line number="71" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
 						<line number="76" hits="0" branch="false"/>
-						<line number="77" hits="0" branch="false"/>
-						<line number="78" hits="0" branch="false"/>
 						<line number="79" hits="0" branch="false"/>
 						<line number="80" hits="0" branch="false"/>
 						<line number="81" hits="0" branch="false"/>
-						<line number="82" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="82" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="83" hits="0" branch="false"/>
-						<line number="84" hits="0" branch="false"/>
-						<line number="86" hits="0" branch="false"/>
 						<line number="87" hits="0" branch="false"/>
-						<line number="90" hits="0" branch="false"/>
-						<line number="91" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="92" hits="0" branch="false"/>
-						<line number="93" hits="0" branch="false"/>
 						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
 						<line number="97" hits="0" branch="false"/>
 						<line number="98" hits="0" branch="false"/>
 						<line number="99" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
 						<line number="102" hits="0" branch="false"/>
-						<line number="103" hits="0" branch="false"/>
-						<line number="106" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
+						<line number="107" hits="0" branch="false"/>
 						<line number="108" hits="0" branch="false"/>
 						<line number="109" hits="0" branch="false"/>
 						<line number="110" hits="0" branch="false"/>
 						<line number="111" hits="0" branch="false"/>
+						<line number="112" hits="0" branch="false"/>
 						<line number="113" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="114" hits="0" branch="false"/>
 						<line number="115" hits="0" branch="false"/>
-						<line number="116" hits="0" branch="false"/>
 						<line number="117" hits="0" branch="false"/>
 						<line number="118" hits="0" branch="false"/>
-						<line number="120" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.help.ContributeMouseListener" filename="edu/jiangxin/apktoolbox/help/ContributeMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="3.0">
+				<class name="edu.jiangxin.apktoolbox.help.ContributeActionListener" filename="edu/jiangxin/apktoolbox/help/ContributeActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="10" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="0" branch="false"/>
 								<line number="16" hits="0" branch="false"/>
 								<line number="17" hits="0" branch="false"/>
 								<line number="18" hits="0" branch="false"/>
@@ -372,7 +367,6 @@
 					</methods>
 					<lines>
 						<line number="10" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
 						<line number="16" hits="0" branch="false"/>
 						<line number="17" hits="0" branch="false"/>
 						<line number="18" hits="0" branch="false"/>
@@ -385,16 +379,40 @@
 				</class>
 			</classes>
 		</package>
-		<package name="edu.jiangxin.apktoolbox.i18n" line-rate="0.0" branch-rate="0.0" complexity="5.9">
+		<package name="edu.jiangxin.apktoolbox.i18n" line-rate="0.0" branch-rate="0.0" complexity="4.7894736842105265">
 			<classes>
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NAddActionListener" filename="edu/jiangxin/apktoolbox/i18n/I18NAddActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+					</lines>
+				</class>
 				<class name="edu.jiangxin.apktoolbox.i18n.I18NAddFrame" filename="edu/jiangxin/apktoolbox/i18n/I18NAddFrame.java" line-rate="0.0" branch-rate="0.0" complexity="6.444444444444445">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="204" hits="0" branch="false"/>
+								<line number="202" hits="0" branch="false"/>
+								<line number="205" hits="0" branch="false"/>
+								<line number="206" hits="0" branch="false"/>
 								<line number="207" hits="0" branch="false"/>
-								<line number="208" hits="0" branch="false"/>
-								<line number="209" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -439,8 +457,8 @@
 								<line number="128" hits="0" branch="false"/>
 								<line number="130" hits="0" branch="false"/>
 								<line number="131" hits="0" branch="false"/>
-								<line number="197" hits="0" branch="false"/>
-								<line number="198" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="access$000" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NAddFrame;)Lorg/apache/logging/log4j/Logger;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -478,176 +496,176 @@
 						</method>
 						<method name="getCanonicalPath" signature="(Ljava/io/File;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="342" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="340" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="343" hits="0" branch="false"/>
-								<line number="344" hits="0" branch="false"/>
+								<line number="341" hits="0" branch="false"/>
+								<line number="342" hits="0" branch="false"/>
+								<line number="345" hits="0" branch="false"/>
+								<line number="346" hits="0" branch="false"/>
 								<line number="347" hits="0" branch="false"/>
 								<line number="348" hits="0" branch="false"/>
-								<line number="349" hits="0" branch="false"/>
-								<line number="350" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="innerProcessor" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="212" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="210" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="211" hits="0" branch="false"/>
 								<line number="213" hits="0" branch="false"/>
 								<line number="215" hits="0" branch="false"/>
+								<line number="216" hits="0" branch="false"/>
 								<line number="217" hits="0" branch="false"/>
-								<line number="218" hits="0" branch="false"/>
 								<line number="219" hits="0" branch="false"/>
-								<line number="221" hits="0" branch="false"/>
-								<line number="226" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="224" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="227" hits="0" branch="false"/>
-								<line number="228" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+								<line number="228" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="229" hits="0" branch="false"/>
 								<line number="230" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
 								<line number="231" hits="0" branch="false"/>
-								<line number="232" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="233" hits="0" branch="false"/>
-								<line number="234" hits="0" branch="false"/>
-								<line number="237" hits="0" branch="false"/>
+								<line number="232" hits="0" branch="false"/>
+								<line number="235" hits="0" branch="false"/>
+								<line number="236" hits="0" branch="false"/>
 								<line number="238" hits="0" branch="false"/>
+								<line number="239" hits="0" branch="false"/>
 								<line number="240" hits="0" branch="false"/>
 								<line number="241" hits="0" branch="false"/>
 								<line number="242" hits="0" branch="false"/>
 								<line number="243" hits="0" branch="false"/>
 								<line number="244" hits="0" branch="false"/>
-								<line number="245" hits="0" branch="false"/>
-								<line number="246" hits="0" branch="false"/>
-								<line number="247" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="245" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="248" hits="0" branch="false"/>
-								<line number="249" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="246" hits="0" branch="false"/>
+								<line number="247" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="250" hits="0" branch="false"/>
+								<line number="248" hits="0" branch="false"/>
+								<line number="249" hits="0" branch="false"/>
 								<line number="251" hits="0" branch="false"/>
+								<line number="252" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
 								<line number="253" hits="0" branch="false"/>
-								<line number="254" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="254" hits="0" branch="false"/>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="255" hits="0" branch="false"/>
-								<line number="256" hits="0" branch="false"/>
 								<line number="259" hits="0" branch="false"/>
-								<line number="260" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="261" hits="0" branch="false"/>
-								<line number="262" hits="0" branch="false"/>
+								<line number="260" hits="0" branch="false"/>
+								<line number="263" hits="0" branch="false"/>
+								<line number="264" hits="0" branch="false"/>
 								<line number="265" hits="0" branch="false"/>
 								<line number="266" hits="0" branch="false"/>
 								<line number="267" hits="0" branch="false"/>
-								<line number="268" hits="0" branch="false"/>
-								<line number="269" hits="0" branch="false"/>
+								<line number="271" hits="0" branch="false"/>
+								<line number="272" hits="0" branch="false"/>
 								<line number="273" hits="0" branch="false"/>
 								<line number="274" hits="0" branch="false"/>
 								<line number="275" hits="0" branch="false"/>
 								<line number="276" hits="0" branch="false"/>
 								<line number="277" hits="0" branch="false"/>
 								<line number="278" hits="0" branch="false"/>
-								<line number="279" hits="0" branch="false"/>
-								<line number="280" hits="0" branch="false"/>
-								<line number="282" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="280" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="283" hits="0" branch="false"/>
-								<line number="284" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="281" hits="0" branch="false"/>
+								<line number="282" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="283" hits="0" branch="false"/>
+								<line number="284" hits="0" branch="false"/>
 								<line number="285" hits="0" branch="false"/>
-								<line number="286" hits="0" branch="false"/>
 								<line number="287" hits="0" branch="false"/>
-								<line number="289" hits="0" branch="false"/>
-								<line number="291" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="289" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="290" hits="0" branch="false"/>
+								<line number="291" hits="0" branch="false"/>
 								<line number="292" hits="0" branch="false"/>
-								<line number="293" hits="0" branch="false"/>
-								<line number="294" hits="0" branch="false"/>
+								<line number="295" hits="0" branch="false"/>
+								<line number="296" hits="0" branch="false"/>
 								<line number="297" hits="0" branch="false"/>
 								<line number="298" hits="0" branch="false"/>
 								<line number="299" hits="0" branch="false"/>
-								<line number="300" hits="0" branch="false"/>
 								<line number="301" hits="0" branch="false"/>
+								<line number="302" hits="0" branch="false"/>
 								<line number="303" hits="0" branch="false"/>
 								<line number="304" hits="0" branch="false"/>
 								<line number="305" hits="0" branch="false"/>
-								<line number="306" hits="0" branch="false"/>
 								<line number="307" hits="0" branch="false"/>
+								<line number="308" hits="0" branch="false"/>
 								<line number="309" hits="0" branch="false"/>
 								<line number="310" hits="0" branch="false"/>
 								<line number="311" hits="0" branch="false"/>
 								<line number="312" hits="0" branch="false"/>
 								<line number="313" hits="0" branch="false"/>
-								<line number="314" hits="0" branch="false"/>
 								<line number="315" hits="0" branch="false"/>
-								<line number="317" hits="0" branch="false"/>
-								<line number="318" hits="0" branch="false"/>
+								<line number="316" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="postProcess" signature="(Ljava/io/File;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="331" hits="0" branch="false"/>
-								<line number="332" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="329" hits="0" branch="false"/>
+								<line number="330" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="333" hits="0" branch="false"/>
+								<line number="331" hits="0" branch="false"/>
+								<line number="332" hits="0" branch="false"/>
 								<line number="334" hits="0" branch="false"/>
 								<line number="336" hits="0" branch="false"/>
-								<line number="338" hits="0" branch="false"/>
-								<line number="339" hits="0" branch="false"/>
+								<line number="337" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="prePocess" signature="(Ljava/io/File;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="323" hits="0" branch="false"/>
-								<line number="324" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="321" hits="0" branch="false"/>
+								<line number="322" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="323" hits="0" branch="false"/>
+								<line number="324" hits="0" branch="false"/>
 								<line number="325" hits="0" branch="false"/>
 								<line number="326" hits="0" branch="false"/>
-								<line number="327" hits="0" branch="false"/>
-								<line number="328" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -693,170 +711,170 @@
 						<line number="128" hits="0" branch="false"/>
 						<line number="130" hits="0" branch="false"/>
 						<line number="131" hits="0" branch="false"/>
-						<line number="197" hits="0" branch="false"/>
-						<line number="198" hits="0" branch="false"/>
-						<line number="204" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="202" hits="0" branch="false"/>
+						<line number="205" hits="0" branch="false"/>
+						<line number="206" hits="0" branch="false"/>
 						<line number="207" hits="0" branch="false"/>
-						<line number="208" hits="0" branch="false"/>
-						<line number="209" hits="0" branch="false"/>
-						<line number="212" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="210" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="211" hits="0" branch="false"/>
 						<line number="213" hits="0" branch="false"/>
 						<line number="215" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
 						<line number="217" hits="0" branch="false"/>
-						<line number="218" hits="0" branch="false"/>
 						<line number="219" hits="0" branch="false"/>
-						<line number="221" hits="0" branch="false"/>
-						<line number="226" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="224" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="227" hits="0" branch="false"/>
-						<line number="228" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+						<line number="228" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="229" hits="0" branch="false"/>
 						<line number="230" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
 						<line number="231" hits="0" branch="false"/>
-						<line number="232" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="233" hits="0" branch="false"/>
-						<line number="234" hits="0" branch="false"/>
-						<line number="237" hits="0" branch="false"/>
+						<line number="232" hits="0" branch="false"/>
+						<line number="235" hits="0" branch="false"/>
+						<line number="236" hits="0" branch="false"/>
 						<line number="238" hits="0" branch="false"/>
+						<line number="239" hits="0" branch="false"/>
 						<line number="240" hits="0" branch="false"/>
 						<line number="241" hits="0" branch="false"/>
 						<line number="242" hits="0" branch="false"/>
 						<line number="243" hits="0" branch="false"/>
 						<line number="244" hits="0" branch="false"/>
-						<line number="245" hits="0" branch="false"/>
-						<line number="246" hits="0" branch="false"/>
-						<line number="247" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="245" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="248" hits="0" branch="false"/>
-						<line number="249" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="246" hits="0" branch="false"/>
+						<line number="247" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="250" hits="0" branch="false"/>
+						<line number="248" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
 						<line number="251" hits="0" branch="false"/>
+						<line number="252" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="253" hits="0" branch="false"/>
-						<line number="254" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="254" hits="0" branch="false"/>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="255" hits="0" branch="false"/>
-						<line number="256" hits="0" branch="false"/>
 						<line number="259" hits="0" branch="false"/>
-						<line number="260" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="261" hits="0" branch="false"/>
-						<line number="262" hits="0" branch="false"/>
+						<line number="260" hits="0" branch="false"/>
+						<line number="263" hits="0" branch="false"/>
+						<line number="264" hits="0" branch="false"/>
 						<line number="265" hits="0" branch="false"/>
 						<line number="266" hits="0" branch="false"/>
 						<line number="267" hits="0" branch="false"/>
-						<line number="268" hits="0" branch="false"/>
-						<line number="269" hits="0" branch="false"/>
+						<line number="271" hits="0" branch="false"/>
+						<line number="272" hits="0" branch="false"/>
 						<line number="273" hits="0" branch="false"/>
 						<line number="274" hits="0" branch="false"/>
 						<line number="275" hits="0" branch="false"/>
 						<line number="276" hits="0" branch="false"/>
 						<line number="277" hits="0" branch="false"/>
 						<line number="278" hits="0" branch="false"/>
-						<line number="279" hits="0" branch="false"/>
-						<line number="280" hits="0" branch="false"/>
-						<line number="282" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="280" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="283" hits="0" branch="false"/>
-						<line number="284" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="281" hits="0" branch="false"/>
+						<line number="282" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="283" hits="0" branch="false"/>
+						<line number="284" hits="0" branch="false"/>
 						<line number="285" hits="0" branch="false"/>
-						<line number="286" hits="0" branch="false"/>
 						<line number="287" hits="0" branch="false"/>
-						<line number="289" hits="0" branch="false"/>
-						<line number="291" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="289" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="290" hits="0" branch="false"/>
+						<line number="291" hits="0" branch="false"/>
 						<line number="292" hits="0" branch="false"/>
-						<line number="293" hits="0" branch="false"/>
-						<line number="294" hits="0" branch="false"/>
+						<line number="295" hits="0" branch="false"/>
+						<line number="296" hits="0" branch="false"/>
 						<line number="297" hits="0" branch="false"/>
 						<line number="298" hits="0" branch="false"/>
 						<line number="299" hits="0" branch="false"/>
-						<line number="300" hits="0" branch="false"/>
 						<line number="301" hits="0" branch="false"/>
+						<line number="302" hits="0" branch="false"/>
 						<line number="303" hits="0" branch="false"/>
 						<line number="304" hits="0" branch="false"/>
 						<line number="305" hits="0" branch="false"/>
-						<line number="306" hits="0" branch="false"/>
 						<line number="307" hits="0" branch="false"/>
+						<line number="308" hits="0" branch="false"/>
 						<line number="309" hits="0" branch="false"/>
 						<line number="310" hits="0" branch="false"/>
 						<line number="311" hits="0" branch="false"/>
 						<line number="312" hits="0" branch="false"/>
 						<line number="313" hits="0" branch="false"/>
-						<line number="314" hits="0" branch="false"/>
 						<line number="315" hits="0" branch="false"/>
-						<line number="317" hits="0" branch="false"/>
-						<line number="318" hits="0" branch="false"/>
-						<line number="323" hits="0" branch="false"/>
-						<line number="324" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="316" hits="0" branch="false"/>
+						<line number="321" hits="0" branch="false"/>
+						<line number="322" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="323" hits="0" branch="false"/>
+						<line number="324" hits="0" branch="false"/>
 						<line number="325" hits="0" branch="false"/>
 						<line number="326" hits="0" branch="false"/>
-						<line number="327" hits="0" branch="false"/>
-						<line number="328" hits="0" branch="false"/>
-						<line number="331" hits="0" branch="false"/>
-						<line number="332" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="329" hits="0" branch="false"/>
+						<line number="330" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="333" hits="0" branch="false"/>
+						<line number="331" hits="0" branch="false"/>
+						<line number="332" hits="0" branch="false"/>
 						<line number="334" hits="0" branch="false"/>
 						<line number="336" hits="0" branch="false"/>
-						<line number="338" hits="0" branch="false"/>
-						<line number="339" hits="0" branch="false"/>
-						<line number="342" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="337" hits="0" branch="false"/>
+						<line number="340" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="343" hits="0" branch="false"/>
-						<line number="344" hits="0" branch="false"/>
+						<line number="341" hits="0" branch="false"/>
+						<line number="342" hits="0" branch="false"/>
+						<line number="345" hits="0" branch="false"/>
+						<line number="346" hits="0" branch="false"/>
 						<line number="347" hits="0" branch="false"/>
 						<line number="348" hits="0" branch="false"/>
-						<line number="349" hits="0" branch="false"/>
-						<line number="350" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.i18n.I18NAddFrame$1" filename="edu/jiangxin/apktoolbox/i18n/I18NAddFrame.java" line-rate="0.0" branch-rate="0.0" complexity="6.444444444444445">
@@ -977,62 +995,60 @@
 								<line number="151" hits="0" branch="false"/>
 								<line number="153" hits="0" branch="false"/>
 								<line number="154" hits="0" branch="false"/>
-								<line number="155" hits="0" branch="false"/>
-								<line number="156" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="155" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="157" hits="0" branch="false"/>
-								<line number="158" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="156" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="158" hits="0" branch="false"/>
 								<line number="159" hits="0" branch="false"/>
 								<line number="160" hits="0" branch="false"/>
-								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
 								<line number="163" hits="0" branch="false"/>
-								<line number="164" hits="0" branch="false"/>
 								<line number="166" hits="0" branch="false"/>
+								<line number="167" hits="0" branch="false"/>
 								<line number="168" hits="0" branch="false"/>
 								<line number="169" hits="0" branch="false"/>
 								<line number="170" hits="0" branch="false"/>
-								<line number="171" hits="0" branch="false"/>
 								<line number="172" hits="0" branch="false"/>
 								<line number="174" hits="0" branch="false"/>
-								<line number="176" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="176" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
 								<line number="177" hits="0" branch="false"/>
-								<line number="178" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
 								<line number="179" hits="0" branch="false"/>
-								<line number="181" hits="0" branch="false"/>
-								<line number="183" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="181" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="182" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="183" hits="0" branch="false"/>
 								<line number="184" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
 								<line number="185" hits="0" branch="false"/>
-								<line number="186" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="187" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
 								<line number="188" hits="0" branch="false"/>
 								<line number="190" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="false"/>
 								<line number="192" hits="0" branch="false"/>
-								<line number="193" hits="0" branch="false"/>
-								<line number="194" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -1059,282 +1075,560 @@
 						<line number="151" hits="0" branch="false"/>
 						<line number="153" hits="0" branch="false"/>
 						<line number="154" hits="0" branch="false"/>
-						<line number="155" hits="0" branch="false"/>
-						<line number="156" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="155" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="157" hits="0" branch="false"/>
-						<line number="158" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="156" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="158" hits="0" branch="false"/>
 						<line number="159" hits="0" branch="false"/>
 						<line number="160" hits="0" branch="false"/>
-						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
 						<line number="163" hits="0" branch="false"/>
-						<line number="164" hits="0" branch="false"/>
 						<line number="166" hits="0" branch="false"/>
+						<line number="167" hits="0" branch="false"/>
 						<line number="168" hits="0" branch="false"/>
 						<line number="169" hits="0" branch="false"/>
 						<line number="170" hits="0" branch="false"/>
-						<line number="171" hits="0" branch="false"/>
 						<line number="172" hits="0" branch="false"/>
 						<line number="174" hits="0" branch="false"/>
-						<line number="176" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="176" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="177" hits="0" branch="false"/>
-						<line number="178" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
 						<line number="179" hits="0" branch="false"/>
-						<line number="181" hits="0" branch="false"/>
-						<line number="183" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="181" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="182" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="183" hits="0" branch="false"/>
 						<line number="184" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
 						<line number="185" hits="0" branch="false"/>
-						<line number="186" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="187" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
 						<line number="188" hits="0" branch="false"/>
 						<line number="190" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="false"/>
 						<line number="192" hits="0" branch="false"/>
-						<line number="193" hits="0" branch="false"/>
-						<line number="194" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.i18n.I18NAddFrame$4" filename="edu/jiangxin/apktoolbox/i18n/I18NAddFrame.java" line-rate="0.0" branch-rate="1.0" complexity="6.444444444444445">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NAddFrame;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="221" hits="0" branch="false"/>
+								<line number="219" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="accept" signature="(Ljava/io/File;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="223" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
+						<line number="219" hits="0" branch="false"/>
 						<line number="221" hits="0" branch="false"/>
-						<line number="223" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.i18n.I18NAddMouseListener" filename="edu/jiangxin/apktoolbox/i18n/I18NAddMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestActionListener" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
 					</lines>
 				</class>
-			</classes>
-		</package>
-		<package name="edu.jiangxin.apktoolbox.i18n.core" line-rate="0.0" branch-rate="0.0" complexity="2.6666666666666665">
-			<classes>
-				<class name="edu.jiangxin.apktoolbox.i18n.core.GetLongestLanguage" filename="edu/jiangxin/apktoolbox/i18n/core/GetLongestLanguage.java" line-rate="0.0" branch-rate="0.0" complexity="2.75">
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="0.0" complexity="3.875">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="16" hits="0" branch="false"/>
+								<line number="36" hits="0" branch="false"/>
+								<line number="39" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="45" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+								<line number="48" hits="0" branch="false"/>
+								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+								<line number="52" hits="0" branch="false"/>
+								<line number="54" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="false"/>
+								<line number="58" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="79" hits="0" branch="false"/>
+								<line number="81" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="access$000" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)Lorg/apache/logging/log4j/Logger;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="22" hits="0" branch="false"/>
-								<line number="23" hits="0" branch="false"/>
-								<line number="25" hits="0" branch="true" condition-coverage="0% (0/2)">
+							</lines>
+						</method>
+						<method name="access$100" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)Lorg/apache/logging/log4j/Logger;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="access$200" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)Lorg/apache/commons/configuration2/Configuration;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="access$300" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)Lorg/apache/logging/log4j/Logger;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="access$400" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)Lorg/apache/commons/configuration2/Configuration;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="access$500" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;Ljava/lang/String;Ljava/lang/String;)I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="findLongest" signature="(Ljava/lang/String;Ljava/lang/String;)I" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="168" hits="0" branch="false"/>
+								<line number="170" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="31" hits="0" branch="false"/>
-								<line number="32" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="176" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="34" hits="0" branch="false"/>
-								<line number="35" hits="0" branch="false"/>
-								<line number="36" hits="0" branch="false"/>
-								<line number="37" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="179" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="185" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="38" hits="0" branch="false"/>
-								<line number="39" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="40" hits="0" branch="false"/>
-								<line number="41" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="191" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="42" hits="0" branch="false"/>
-								<line number="43" hits="0" branch="false"/>
-								<line number="44" hits="0" branch="false"/>
-								<line number="47" hits="0" branch="false"/>
-								<line number="52" hits="0" branch="false"/>
-								<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="193" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="198" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="59" hits="0" branch="false"/>
-								<line number="60" hits="0" branch="false"/>
-								<line number="62" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="211" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCanonicalPath" signature="(Ljava/io/File;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="155" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="156" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="false"/>
+								<line number="160" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="16" hits="0" branch="false"/>
-						<line number="22" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="25" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="31" hits="0" branch="false"/>
-						<line number="32" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="34" hits="0" branch="false"/>
-						<line number="35" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
 						<line number="36" hits="0" branch="false"/>
-						<line number="37" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="39" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="45" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="48" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="79" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="38" hits="0" branch="false"/>
-						<line number="39" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="156" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="false"/>
+						<line number="160" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="170" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="176" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="179" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="185" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="40" hits="0" branch="false"/>
-						<line number="41" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="191" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="42" hits="0" branch="false"/>
-						<line number="43" hits="0" branch="false"/>
-						<line number="44" hits="0" branch="false"/>
-						<line number="47" hits="0" branch="false"/>
-						<line number="52" hits="0" branch="false"/>
-						<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="193" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="198" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="59" hits="0" branch="false"/>
-						<line number="60" hits="0" branch="false"/>
-						<line number="62" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="211" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.i18n.core.GetLongestLanguage$1" filename="edu/jiangxin/apktoolbox/i18n/core/GetLongestLanguage.java" line-rate="0.0" branch-rate="1.0" complexity="2.75">
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame$1" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="0.0" complexity="3.875">
 					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;Ljavax/swing/JTextField;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="25" hits="0" branch="false"/>
+								<line number="58" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="accept" signature="(Ljava/io/File;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="28" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="25" hits="0" branch="false"/>
-						<line number="28" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.i18n.core.GetLongestLanguage$2" filename="edu/jiangxin/apktoolbox/i18n/core/GetLongestLanguage.java" line-rate="0.0" branch-rate="1.0" complexity="2.75">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
-							<lines>
-							</lines>
-						</method>
-						<method name="compare" signature="(Ledu/jiangxin/apktoolbox/i18n/core/I18NInfo;Ledu/jiangxin/apktoolbox/i18n/core/I18NInfo;)I" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="54" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="compare" signature="(Ljava/lang/Object;Ljava/lang/Object;)I" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="52" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="52" hits="0" branch="false"/>
-						<line number="54" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.i18n.core.I18NInfo" filename="edu/jiangxin/apktoolbox/i18n/core/GetLongestLanguage.java" line-rate="0.0" branch-rate="1.0" complexity="2.75">
-					<methods>
-						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;I)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="71" hits="0" branch="false"/>
-								<line number="72" hits="0" branch="false"/>
-								<line number="73" hits="0" branch="false"/>
-								<line number="74" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="66" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="switch" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
 								<line number="75" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="71" hits="0" branch="false"/>
-						<line number="72" hits="0" branch="false"/>
-						<line number="73" hits="0" branch="false"/>
-						<line number="74" hits="0" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="switch" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
 						<line number="75" hits="0" branch="false"/>
 					</lines>
 				</class>
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame$2" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="0.0" complexity="3.875">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;Ljavax/swing/JTextField;Ljavax/swing/JTextField;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="98" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="101" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="105" hits="0" branch="false"/>
+								<line number="106" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="121" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="139" hits="0" branch="false"/>
+								<line number="140" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="144" hits="0" branch="false"/>
+								<line number="148" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="98" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="105" hits="0" branch="false"/>
+						<line number="106" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="121" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="139" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="144" hits="0" branch="false"/>
+						<line number="148" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame$3" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="1.0" complexity="3.875">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="170" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="accept" signature="(Ljava/io/File;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="173" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="170" hits="0" branch="false"/>
+						<line number="173" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame$4" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="1.0" complexity="3.875">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="compare" signature="(Ledu/jiangxin/apktoolbox/i18n/I18NInfo;Ledu/jiangxin/apktoolbox/i18n/I18NInfo;)I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="205" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="compare" signature="(Ljava/lang/Object;Ljava/lang/Object;)I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="203" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="203" hits="0" branch="false"/>
+						<line number="205" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="edu.jiangxin.apktoolbox.i18n.I18NInfo" filename="edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java" line-rate="0.0" branch-rate="1.0" complexity="3.875">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;I)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="222" hits="0" branch="false"/>
+								<line number="223" hits="0" branch="false"/>
+								<line number="224" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="222" hits="0" branch="false"/>
+						<line number="223" hits="0" branch="false"/>
+						<line number="224" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="edu.jiangxin.apktoolbox.i18n.core" line-rate="0.0" branch-rate="0.0" complexity="2.5">
+			<classes>
 				<class name="edu.jiangxin.apktoolbox.i18n.core.I18NRemoveItem" filename="edu/jiangxin/apktoolbox/i18n/core/I18NRemoveItem.java" line-rate="0.0" branch-rate="0.0" complexity="2.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -1431,260 +1725,250 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
+								<line number="59" hits="0" branch="false"/>
 								<line number="60" hits="0" branch="false"/>
 								<line number="61" hits="0" branch="false"/>
 								<line number="62" hits="0" branch="false"/>
 								<line number="63" hits="0" branch="false"/>
-								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
 								<line number="66" hits="0" branch="false"/>
-								<line number="67" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
 								<line number="69" hits="0" branch="false"/>
 								<line number="70" hits="0" branch="false"/>
 								<line number="72" hits="0" branch="false"/>
 								<line number="73" hits="0" branch="false"/>
 								<line number="74" hits="0" branch="false"/>
-								<line number="76" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
 								<line number="77" hits="0" branch="false"/>
 								<line number="78" hits="0" branch="false"/>
-								<line number="80" hits="0" branch="false"/>
+								<line number="79" hits="0" branch="false"/>
 								<line number="81" hits="0" branch="false"/>
 								<line number="82" hits="0" branch="false"/>
-								<line number="84" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
 								<line number="85" hits="0" branch="false"/>
 								<line number="86" hits="0" branch="false"/>
-								<line number="88" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
 								<line number="89" hits="0" branch="false"/>
 								<line number="90" hits="0" branch="false"/>
-								<line number="92" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
 								<line number="93" hits="0" branch="false"/>
 								<line number="94" hits="0" branch="false"/>
-								<line number="96" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
 								<line number="97" hits="0" branch="false"/>
-								<line number="99" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
 								<line number="100" hits="0" branch="false"/>
 								<line number="101" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
 								<line number="103" hits="0" branch="false"/>
-								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
 								<line number="106" hits="0" branch="false"/>
-								<line number="107" hits="0" branch="false"/>
 								<line number="108" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
 								<line number="110" hits="0" branch="false"/>
-								<line number="111" hits="0" branch="false"/>
+								<line number="112" hits="0" branch="false"/>
 								<line number="113" hits="0" branch="false"/>
-								<line number="114" hits="0" branch="false"/>
 								<line number="115" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
 								<line number="117" hits="0" branch="false"/>
-								<line number="118" hits="0" branch="false"/>
 								<line number="119" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
 								<line number="121" hits="0" branch="false"/>
-								<line number="122" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
 								<line number="124" hits="0" branch="false"/>
-								<line number="125" hits="0" branch="false"/>
 								<line number="126" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
 								<line number="128" hits="0" branch="false"/>
-								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
 								<line number="131" hits="0" branch="false"/>
 								<line number="132" hits="0" branch="false"/>
-								<line number="133" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
 								<line number="135" hits="0" branch="false"/>
-								<line number="136" hits="0" branch="false"/>
 								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
 								<line number="139" hits="0" branch="false"/>
-								<line number="140" hits="0" branch="false"/>
 								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
 								<line number="143" hits="0" branch="false"/>
-								<line number="144" hits="0" branch="false"/>
 								<line number="145" hits="0" branch="false"/>
 								<line number="146" hits="0" branch="false"/>
-								<line number="148" hits="0" branch="false"/>
+								<line number="147" hits="0" branch="false"/>
 								<line number="149" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
 								<line number="151" hits="0" branch="false"/>
 								<line number="152" hits="0" branch="false"/>
 								<line number="154" hits="0" branch="false"/>
 								<line number="155" hits="0" branch="false"/>
-								<line number="156" hits="0" branch="false"/>
 								<line number="157" hits="0" branch="false"/>
 								<line number="158" hits="0" branch="false"/>
-								<line number="159" hits="0" branch="false"/>
 								<line number="160" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
 								<line number="162" hits="0" branch="false"/>
 								<line number="163" hits="0" branch="false"/>
-								<line number="178" hits="0" branch="false"/>
-								<line number="179" hits="0" branch="false"/>
-								<line number="181" hits="0" branch="false"/>
-								<line number="182" hits="0" branch="false"/>
+								<line number="164" hits="0" branch="false"/>
+								<line number="165" hits="0" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="169" hits="0" branch="false"/>
 								<line number="184" hits="0" branch="false"/>
 								<line number="185" hits="0" branch="false"/>
-								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
 								<line number="188" hits="0" branch="false"/>
-								<line number="189" hits="0" branch="false"/>
-								<line number="190" hits="0" branch="false"/>
 								<line number="191" hits="0" branch="false"/>
-								<line number="193" hits="0" branch="false"/>
-								<line number="194" hits="0" branch="false"/>
-								<line number="195" hits="0" branch="false"/>
-								<line number="196" hits="0" branch="false"/>
-								<line number="197" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="47" hits="0" branch="false"/>
-								<line number="58" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="47" hits="0" branch="false"/>
-						<line number="58" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
 						<line number="60" hits="0" branch="false"/>
 						<line number="61" hits="0" branch="false"/>
 						<line number="62" hits="0" branch="false"/>
 						<line number="63" hits="0" branch="false"/>
-						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
 						<line number="66" hits="0" branch="false"/>
-						<line number="67" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
 						<line number="69" hits="0" branch="false"/>
 						<line number="70" hits="0" branch="false"/>
 						<line number="72" hits="0" branch="false"/>
 						<line number="73" hits="0" branch="false"/>
 						<line number="74" hits="0" branch="false"/>
-						<line number="76" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
 						<line number="77" hits="0" branch="false"/>
 						<line number="78" hits="0" branch="false"/>
-						<line number="80" hits="0" branch="false"/>
+						<line number="79" hits="0" branch="false"/>
 						<line number="81" hits="0" branch="false"/>
 						<line number="82" hits="0" branch="false"/>
-						<line number="84" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
 						<line number="85" hits="0" branch="false"/>
 						<line number="86" hits="0" branch="false"/>
-						<line number="88" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
 						<line number="89" hits="0" branch="false"/>
 						<line number="90" hits="0" branch="false"/>
-						<line number="92" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
 						<line number="93" hits="0" branch="false"/>
 						<line number="94" hits="0" branch="false"/>
-						<line number="96" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
 						<line number="97" hits="0" branch="false"/>
-						<line number="99" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
 						<line number="100" hits="0" branch="false"/>
 						<line number="101" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
 						<line number="103" hits="0" branch="false"/>
-						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
 						<line number="106" hits="0" branch="false"/>
-						<line number="107" hits="0" branch="false"/>
 						<line number="108" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
 						<line number="110" hits="0" branch="false"/>
-						<line number="111" hits="0" branch="false"/>
+						<line number="112" hits="0" branch="false"/>
 						<line number="113" hits="0" branch="false"/>
-						<line number="114" hits="0" branch="false"/>
 						<line number="115" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
 						<line number="117" hits="0" branch="false"/>
-						<line number="118" hits="0" branch="false"/>
 						<line number="119" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
 						<line number="121" hits="0" branch="false"/>
-						<line number="122" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
 						<line number="124" hits="0" branch="false"/>
-						<line number="125" hits="0" branch="false"/>
 						<line number="126" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
 						<line number="128" hits="0" branch="false"/>
-						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
 						<line number="131" hits="0" branch="false"/>
 						<line number="132" hits="0" branch="false"/>
-						<line number="133" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
 						<line number="135" hits="0" branch="false"/>
-						<line number="136" hits="0" branch="false"/>
 						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
 						<line number="139" hits="0" branch="false"/>
-						<line number="140" hits="0" branch="false"/>
 						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
 						<line number="143" hits="0" branch="false"/>
-						<line number="144" hits="0" branch="false"/>
 						<line number="145" hits="0" branch="false"/>
 						<line number="146" hits="0" branch="false"/>
-						<line number="148" hits="0" branch="false"/>
+						<line number="147" hits="0" branch="false"/>
 						<line number="149" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
 						<line number="151" hits="0" branch="false"/>
 						<line number="152" hits="0" branch="false"/>
 						<line number="154" hits="0" branch="false"/>
 						<line number="155" hits="0" branch="false"/>
-						<line number="156" hits="0" branch="false"/>
 						<line number="157" hits="0" branch="false"/>
 						<line number="158" hits="0" branch="false"/>
-						<line number="159" hits="0" branch="false"/>
 						<line number="160" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
 						<line number="162" hits="0" branch="false"/>
 						<line number="163" hits="0" branch="false"/>
-						<line number="178" hits="0" branch="false"/>
-						<line number="179" hits="0" branch="false"/>
-						<line number="181" hits="0" branch="false"/>
-						<line number="182" hits="0" branch="false"/>
+						<line number="164" hits="0" branch="false"/>
+						<line number="165" hits="0" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
 						<line number="184" hits="0" branch="false"/>
 						<line number="185" hits="0" branch="false"/>
-						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
 						<line number="188" hits="0" branch="false"/>
-						<line number="189" hits="0" branch="false"/>
-						<line number="190" hits="0" branch="false"/>
 						<line number="191" hits="0" branch="false"/>
-						<line number="193" hits="0" branch="false"/>
-						<line number="194" hits="0" branch="false"/>
-						<line number="195" hits="0" branch="false"/>
-						<line number="196" hits="0" branch="false"/>
-						<line number="197" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.main.MainFrame$1" filename="edu/jiangxin/apktoolbox/main/MainFrame.java" line-rate="0.0" branch-rate="1.0" complexity="1.2">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="47" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="run" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
+								<line number="50" hits="0" branch="false"/>
 								<line number="51" hits="0" branch="false"/>
 								<line number="52" hits="0" branch="false"/>
 								<line number="53" hits="0" branch="false"/>
 								<line number="54" hits="0" branch="false"/>
 								<line number="55" hits="0" branch="false"/>
-								<line number="56" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="47" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
 						<line number="51" hits="0" branch="false"/>
 						<line number="52" hits="0" branch="false"/>
 						<line number="53" hits="0" branch="false"/>
 						<line number="54" hits="0" branch="false"/>
 						<line number="55" hits="0" branch="false"/>
-						<line number="56" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.main.MainFrame$2" filename="edu/jiangxin/apktoolbox/main/MainFrame.java" line-rate="0.0" branch-rate="1.0" complexity="1.2">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ledu/jiangxin/apktoolbox/main/MainFrame;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="163" hits="0" branch="false"/>
-								<line number="168" hits="0" branch="false"/>
+								<line number="169" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getElementAt" signature="(I)Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="175" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getSize" signature="()I" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="171" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="163" hits="0" branch="false"/>
-						<line number="168" hits="0" branch="false"/>
-						<line number="171" hits="0" branch="false"/>
-						<line number="175" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>
@@ -1707,6 +1991,30 @@
 					<lines>
 						<line number="3" hits="0" branch="false"/>
 						<line number="8" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="edu.jiangxin.apktoolbox.monkey.MonkeyActionListener" filename="edu/jiangxin/apktoolbox/monkey/MonkeyActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.monkey.AutoCompleter3" filename="edu/jiangxin/apktoolbox/monkey/MonkeyFrame.java" line-rate="0.0" branch-rate="0.0" complexity="2.8333333333333335">
@@ -3673,32 +3981,6 @@
 						<line number="961" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.monkey.MonkeyMouseListener" filename="edu/jiangxin/apktoolbox/monkey/MonkeyMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="12" hits="0" branch="false"/>
-								<line number="13" hits="0" branch="false"/>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="12" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-					</lines>
-				</class>
 				<class name="edu.jiangxin.apktoolbox.monkey.NumberLenghtLimitedDmt" filename="edu/jiangxin/apktoolbox/monkey/NumberLenghtLimitedDmt.java" line-rate="0.0" branch-rate="0.0" complexity="4.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(I)V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -3777,6 +4059,30 @@
 		</package>
 		<package name="edu.jiangxin.apktoolbox.reverse" line-rate="0.0" branch-rate="0.0" complexity="3.52">
 			<classes>
+				<class name="edu.jiangxin.apktoolbox.reverse.AXMLPrinterActionListener" filename="edu/jiangxin/apktoolbox/reverse/AXMLPrinterActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+					</lines>
+				</class>
 				<class name="edu.jiangxin.apktoolbox.reverse.AXMLPrinterFrame" filename="edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.java" line-rate="0.0" branch-rate="1.0" complexity="4.75">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -4137,16 +4443,15 @@
 						<line number="180" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.AXMLPrinterMouseListener" filename="edu/jiangxin/apktoolbox/reverse/AXMLPrinterMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.reverse.ApkSignerActionListener" filename="edu/jiangxin/apktoolbox/reverse/ApkSignerActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
@@ -4156,7 +4461,6 @@
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
@@ -4683,16 +4987,15 @@
 						<line number="243" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.ApkSignerMouseListener" filename="edu/jiangxin/apktoolbox/reverse/ApkSignerMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.reverse.ApktoolDecodeActionListener" filename="edu/jiangxin/apktoolbox/reverse/ApktoolDecodeActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
@@ -4702,7 +5005,6 @@
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
@@ -5079,16 +5381,15 @@
 						<line number="183" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.ApktoolDecodeMouseListener" filename="edu/jiangxin/apktoolbox/reverse/ApktoolDecodeMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.reverse.ApktoolRebuildActionListener" filename="edu/jiangxin/apktoolbox/reverse/ApktoolRebuildActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
@@ -5098,7 +5399,6 @@
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
@@ -5517,33 +5817,7 @@
 						<line number="204" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.ApktoolRebuildMouseListener" filename="edu/jiangxin/apktoolbox/reverse/ApktoolRebuildMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="11" hits="0" branch="false"/>
-								<line number="12" hits="0" branch="false"/>
-								<line number="13" hits="0" branch="false"/>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
-						<line number="12" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.JADXMouseListener" filename="edu/jiangxin/apktoolbox/reverse/JADXMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
+				<class name="edu.jiangxin.apktoolbox.reverse.JADXActionListener" filename="edu/jiangxin/apktoolbox/reverse/JADXActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -5555,59 +5829,9 @@
 								<line number="14" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="20" hits="0" branch="false"/>
-								<line number="22" hits="0" branch="false"/>
-								<line number="23" hits="0" branch="false"/>
-								<line number="24" hits="0" branch="false"/>
-								<line number="25" hits="0" branch="false"/>
-								<line number="26" hits="0" branch="false"/>
-								<line number="27" hits="0" branch="false"/>
-								<line number="28" hits="0" branch="false"/>
-								<line number="29" hits="0" branch="false"/>
-								<line number="30" hits="0" branch="false"/>
-								<line number="31" hits="0" branch="false"/>
-								<line number="32" hits="0" branch="false"/>
-								<line number="33" hits="0" branch="false"/>
-								<line number="34" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="14" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
-						<line number="22" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="24" hits="0" branch="false"/>
-						<line number="25" hits="0" branch="false"/>
-						<line number="26" hits="0" branch="false"/>
-						<line number="27" hits="0" branch="false"/>
-						<line number="28" hits="0" branch="false"/>
-						<line number="29" hits="0" branch="false"/>
-						<line number="30" hits="0" branch="false"/>
-						<line number="31" hits="0" branch="false"/>
-						<line number="32" hits="0" branch="false"/>
-						<line number="33" hits="0" branch="false"/>
-						<line number="34" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.reverse.JDMouseListener" filename="edu/jiangxin/apktoolbox/reverse/JDMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
-					<methods>
-						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="16" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="14" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
 								<line number="22" hits="0" branch="false"/>
 								<line number="23" hits="0" branch="false"/>
 								<line number="24" hits="0" branch="false"/>
@@ -5626,7 +5850,7 @@
 					<lines>
 						<line number="14" hits="0" branch="false"/>
 						<line number="16" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
 						<line number="22" hits="0" branch="false"/>
 						<line number="23" hits="0" branch="false"/>
 						<line number="24" hits="0" branch="false"/>
@@ -5639,6 +5863,52 @@
 						<line number="31" hits="0" branch="false"/>
 						<line number="32" hits="0" branch="false"/>
 						<line number="33" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="edu.jiangxin.apktoolbox.reverse.JDActionListener" filename="edu/jiangxin/apktoolbox/reverse/JDActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="16" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="false"/>
+								<line number="31" hits="0" branch="false"/>
+								<line number="32" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="31" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>
@@ -6029,16 +6299,15 @@
 						<line number="184" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.screenshot.ScreenshotMouseListener" filename="edu/jiangxin/apktoolbox/screenshot/ScreenshotMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.screenshot.ScreenshotActionListener" filename="edu/jiangxin/apktoolbox/screenshot/ScreenshotActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
@@ -6048,7 +6317,6 @@
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
@@ -6427,6 +6695,32 @@
 		</package>
 		<package name="edu.jiangxin.apktoolbox.text" line-rate="0.0" branch-rate="0.0" complexity="3.0">
 			<classes>
+				<class name="edu.jiangxin.apktoolbox.text.EncodeConvertActionListener" filename="edu/jiangxin/apktoolbox/text/EncodeConvertActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="8" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+								<line number="13" hits="0" branch="false"/>
+								<line number="14" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="8" hits="0" branch="false"/>
+						<line number="12" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="false"/>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+					</lines>
+				</class>
 				<class name="edu.jiangxin.apktoolbox.text.EncodeConvertFrame" filename="edu/jiangxin/apktoolbox/text/EncodeConvertFrame.java" line-rate="0.0" branch-rate="0.0" complexity="3.75">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -6801,32 +7095,28 @@
 						<line number="193" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="edu.jiangxin.apktoolbox.text.EncodeConvertMouseListener" filename="edu/jiangxin/apktoolbox/text/EncodeConvertMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="edu.jiangxin.apktoolbox.text.OSConvertActionListener" filename="edu/jiangxin/apktoolbox/text/OSConvertActionListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="8" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="0" branch="false"/>
 								<line number="12" hits="0" branch="false"/>
 								<line number="13" hits="0" branch="false"/>
 								<line number="14" hits="0" branch="false"/>
 								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
 						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
 						<line number="12" hits="0" branch="false"/>
 						<line number="13" hits="0" branch="false"/>
 						<line number="14" hits="0" branch="false"/>
 						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.text.OSConvertFrame" filename="edu/jiangxin/apktoolbox/text/OSConvertFrame.java" line-rate="0.0" branch-rate="1.0" complexity="3.3333333333333335">
@@ -7059,32 +7349,6 @@
 						<line number="123" hits="0" branch="false"/>
 						<line number="124" hits="0" branch="false"/>
 						<line number="125" hits="0" branch="false"/>
-					</lines>
-				</class>
-				<class name="edu.jiangxin.apktoolbox.text.OSConvertMouseListener" filename="edu/jiangxin/apktoolbox/text/OSConvertMouseListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="8" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="mousePressed" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="11" hits="0" branch="false"/>
-								<line number="12" hits="0" branch="false"/>
-								<line number="13" hits="0" branch="false"/>
-								<line number="14" hits="0" branch="false"/>
-								<line number="15" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="8" hits="0" branch="false"/>
-						<line number="11" hits="0" branch="false"/>
-						<line number="12" hits="0" branch="false"/>
-						<line number="13" hits="0" branch="false"/>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>
