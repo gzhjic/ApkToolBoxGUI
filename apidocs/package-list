@@ -9,4 +9,5 @@ edu.jiangxin.apktoolbox.screenshot
 edu.jiangxin.apktoolbox.swing.extend
 edu.jiangxin.apktoolbox.text
 edu.jiangxin.apktoolbox.text.core
+edu.jiangxin.apktoolbox.text.zhconvert
 edu.jiangxin.apktoolbox.utils

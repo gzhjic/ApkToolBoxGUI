@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 46,
-             Errors: 1242,
+      <title>File: 48,
+             Errors: 1290,
              Warnings: 0,
              Infos: 0
       </title>
@@ -83,7 +83,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  7
+                  9
                 </td>
               </tr>
                           <tr>
@@ -168,6 +168,20 @@ under the License.
                 </td>
                 <td>
                   5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.zhconvert.ZHUtils.java">edu/jiangxin/apktoolbox/text/zhconvert/ZHUtils.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
                 </td>
               </tr>
                           <tr>
@@ -406,6 +420,20 @@ under the License.
                 </td>
                 <td>
                   14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.zhconvert.ZHConverter.java">edu/jiangxin/apktoolbox/text/zhconvert/ZHConverter.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  32
                 </td>
               </tr>
                           <tr>

@@ -30,7 +30,7 @@
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>  
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html">JEasyFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
 <a class="jxr_linenumber" name="L24" href="#L24">24</a>  		<strong class="jxr_keyword">super</strong>();
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  		logger = LogManager.getLogger(<strong class="jxr_keyword">this</strong>.getClass());
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  		logger = LogManager.getLogger(<strong class="jxr_keyword">this</strong>.getClass().getSimpleName());
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  		conf = Utils.getConfiguration();
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  		bundle = ResourceBundle.getBundle(<span class="jxr_string">"apktoolbox"</span>);
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  		addWindowListener(<strong class="jxr_keyword">new</strong> WindowAdapter() {
