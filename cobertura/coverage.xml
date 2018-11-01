@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0871130309575234" branch-rate="0.1377551020408163" lines-covered="242" lines-valid="2778" branches-covered="81" branches-valid="588" complexity="3.3686868686868685" version="2.1.1" timestamp="1540915094314">
+<coverage line-rate="0.0871130309575234" branch-rate="0.1377551020408163" lines-covered="242" lines-valid="2778" branches-covered="81" branches-valid="588" complexity="3.3686868686868685" version="2.1.1" timestamp="1541086317012">
 	<sources>
 		<source>D:/temp/Java/ApkToolBoxGUI/target/generated-sources/annotations</source>
 		<source>--source</source>
@@ -9165,58 +9165,58 @@
 						</method>
 						<method name="convert" signature="(Ljava/lang/String;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="91" hits="0" branch="false"/>
-								<line number="92" hits="0" branch="false"/>
-								<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="84" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="93" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
 								<line number="96" hits="0" branch="false"/>
 								<line number="97" hits="0" branch="false"/>
 								<line number="98" hits="0" branch="false"/>
-								<line number="99" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="100" hits="0" branch="false"/>
-								<line number="101" hits="0" branch="false"/>
-								<line number="103" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
 								<line number="104" hits="0" branch="false"/>
-								<line number="105" hits="0" branch="false"/>
-								<line number="109" hits="0" branch="false"/>
-								<line number="111" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="convert" signature="(Ljava/lang/String;I)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="82" hits="0" branch="false"/>
-								<line number="83" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="flushStack" signature="(Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="115" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="108" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="109" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="117" hits="0" branch="false"/>
-								<line number="118" hits="0" branch="false"/>
-								<line number="121" hits="0" branch="false"/>
-								<line number="122" hits="0" branch="false"/>
-								<line number="126" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getDict" signature="()Ljava/util/Properties;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="129" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getInstance" signature="(I)Ledu/jiangxin/apktoolbox/text/zhconvert/ZHConverter;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -9303,46 +9303,46 @@
 						<line number="69" hits="0" branch="false"/>
 						<line number="70" hits="0" branch="false"/>
 						<line number="72" hits="0" branch="false"/>
-						<line number="82" hits="0" branch="false"/>
-						<line number="83" hits="0" branch="false"/>
-						<line number="91" hits="0" branch="false"/>
-						<line number="92" hits="0" branch="false"/>
-						<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="93" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
 						<line number="96" hits="0" branch="false"/>
 						<line number="97" hits="0" branch="false"/>
 						<line number="98" hits="0" branch="false"/>
-						<line number="99" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="100" hits="0" branch="false"/>
-						<line number="101" hits="0" branch="false"/>
-						<line number="103" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
 						<line number="104" hits="0" branch="false"/>
-						<line number="105" hits="0" branch="false"/>
-						<line number="109" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="109" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="110" hits="0" branch="false"/>
 						<line number="111" hits="0" branch="false"/>
-						<line number="115" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="117" hits="0" branch="false"/>
-						<line number="118" hits="0" branch="false"/>
-						<line number="121" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
 						<line number="122" hits="0" branch="false"/>
-						<line number="126" hits="0" branch="false"/>
-						<line number="129" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="edu.jiangxin.apktoolbox.text.zhconvert.ZHUtils" filename="edu/jiangxin/apktoolbox/text/zhconvert/ZHUtils.java" line-rate="0.0" branch-rate="0.0" complexity="2.8">
