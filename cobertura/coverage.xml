@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0871130309575234" branch-rate="0.1377551020408163" lines-covered="242" lines-valid="2778" branches-covered="81" branches-valid="588" complexity="3.3686868686868685" version="2.1.1" timestamp="1541086317012">
+<coverage line-rate="0.0871130309575234" branch-rate="0.1377551020408163" lines-covered="242" lines-valid="2778" branches-covered="81" branches-valid="588" complexity="3.3686868686868685" version="2.1.1" timestamp="1541170999820">
 	<sources>
 		<source>D:/temp/Java/ApkToolBoxGUI/target/generated-sources/annotations</source>
 		<source>--source</source>
