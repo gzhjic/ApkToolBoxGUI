@@ -45,7 +45,7 @@ APKToolBoxGUI
        <li class="none"><a href="checkstyle.html" title="Checkstyle">Checkstyle</a></li>
        <li class="none"><a href="jdepend-report.html" title="JDepend">JDepend</a></li>
        <li class="none"><a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a></li>
-       <li class="none"><a href="jacoco/index.html" title="JaCoCo">JaCoCo</a></li>
+       <li class="none"><a href="emma/index.html" title="EMMA Test Coverage">EMMA Test Coverage</a></li>
        <li class="none"><a href="apidocs/index.html" title="JavaDocs">JavaDocs</a></li>
        <li class="none"><a href="testapidocs/index.html" title="Test JavaDocs">Test JavaDocs</a></li>
        <li class="none"><a href="javancss.html" title="JavaNCSS Report">JavaNCSS Report</a></li>
@@ -74,11 +74,11 @@ APKToolBoxGUI
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td># of plugins using the latest version available</td>
-<td>15</td></tr>
+<td>16</td></tr>
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td># of plugins where the next version available is smaller than an incremental version update</td>
-<td>1</td></tr>
+<td>2</td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td># of plugins where the next version available is an incremental version update</td>
@@ -86,7 +86,7 @@ APKToolBoxGUI
 <tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td># of plugins where the next version available is a minor version update</td>
-<td>13</td></tr>
+<td>12</td></tr>
 <tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td># of plugins where the next version available is a major version update</td>
@@ -289,6 +289,16 @@ APKToolBoxGUI
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
 <tr class="b">
+<td><img src="images/icon_warning_sml.gif" alt="" /></td>
+<td>org.sonatype.maven.plugin</td>
+<td>emma-maven-plugin</td>
+<td>1.2</td>
+<td><b>1.2.0.fixed</b></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
+<tr class="a">
 <th>Status</th>
 <th>Group Id</th>
 <th>Artifact Id</th>
@@ -301,7 +311,7 @@ APKToolBoxGUI
 <div class="section">
 <h3><a name="Plugins"></a>Plugins</h3>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th>Status</th>
 <th>Group Id</th>
 <th>Artifact Id</th>
@@ -311,7 +321,7 @@ APKToolBoxGUI
 <th>Next Minor</th>
 <th>Next Major</th>
 <th>Dependency status</th></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-clean-plugin</td>
@@ -321,7 +331,7 @@ APKToolBoxGUI
 <td><b>2.6</b></td>
 <td><b>3.0.0</b></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-compiler-plugin</td>
@@ -331,7 +341,7 @@ APKToolBoxGUI
 <td><b>3.7.0</b></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-deploy-plugin</td>
@@ -341,7 +351,7 @@ APKToolBoxGUI
 <td><b>2.8</b></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-install-plugin</td>
@@ -351,7 +361,7 @@ APKToolBoxGUI
 <td><b>2.5</b></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-jar-plugin</td>
@@ -361,7 +371,7 @@ APKToolBoxGUI
 <td><b>2.5</b></td>
 <td><b>3.0.0</b></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_warning_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-resources-plugin</td>
@@ -371,7 +381,7 @@ APKToolBoxGUI
 <td><b>2.7</b></td>
 <td><b>3.0.0</b></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-scm-publish-plugin</td>
@@ -381,7 +391,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-shade-plugin</td>
@@ -391,7 +401,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-site-plugin</td>
@@ -401,7 +411,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-site-scm-publish-plugin</td>
@@ -411,17 +421,17 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
-<td><img src="images/icon_warning_sml.gif" alt="" /></td>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.apache.maven.plugins</td>
 <td>maven-surefire-plugin</td>
-<td>2.12.4</td>
+<td><b>2.22.1</b></td>
 <td></td>
 <td></td>
-<td><b>2.13</b></td>
+<td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.codehaus.mojo</td>
 <td>templating-maven-plugin</td>
@@ -431,7 +441,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.eluder.coveralls</td>
 <td>coveralls-maven-plugin</td>
@@ -441,7 +451,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="a">
+<tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>org.jacoco</td>
 <td>jacoco-maven-plugin</td>
@@ -451,7 +461,7 @@ APKToolBoxGUI
 <td></td>
 <td></td>
 <td><img src="images/icon_success_sml.gif" alt="" /></td></tr>
-<tr class="b">
+<tr class="a">
 <th>Status</th>
 <th>Group Id</th>
 <th>Artifact Id</th>
@@ -467,16 +477,16 @@ APKToolBoxGUI
 <div class="section">
 <h3><a name="Plugin_com.github.jiangxincode:simian-maven-plugin"></a>Plugin com.github.jiangxincode:simian-maven-plugin</h3>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th width="80%">Status</th>
 <td><img src="images/icon_success_sml.gif" alt="" />&#160;No newer versions available.</td></tr>
-<tr class="b">
+<tr class="a">
 <th width="80%">Group Id</th>
 <td>com.github.jiangxincode</td></tr>
-<tr class="a">
+<tr class="b">
 <th width="80%">Artifact Id</th>
 <td>simian-maven-plugin</td></tr>
-<tr class="b">
+<tr class="a">
 <th width="80%">Current Version</th>
 <td>0.0.5</td></tr></table></div>
 <div class="section">
@@ -826,7 +836,7 @@ APKToolBoxGUI
 <table border="0" class="bodyTable">
 <tr class="a">
 <th width="80%">Status</th>
-<td><img src="images/icon_warning_sml.gif" alt="" />&#160;There is at least one newer minor version available. Minor updates are sometimes passive.</td></tr>
+<td><img src="images/icon_success_sml.gif" alt="" />&#160;No newer versions available.</td></tr>
 <tr class="b">
 <th width="80%">Group Id</th>
 <td>org.apache.maven.plugins</td></tr>
@@ -835,10 +845,7 @@ APKToolBoxGUI
 <td>maven-surefire-plugin</td></tr>
 <tr class="b">
 <th width="80%">Current Version</th>
-<td>2.12.4</td></tr>
-<tr class="a">
-<th width="80%">Newer versions</th>
-<td><b>2.13</b>&#160;<i>Next Minor</i><br />2.14<br />2.14.1<br />2.15<br />2.16<br />2.17<br />2.18<br />2.18.1<br />2.19<br />2.19.1<br />2.20<br />2.20.1<br />2.21.0<br /><b>2.22.0</b>&#160;<i>Latest Minor</i></td></tr></table></div>
+<td>2.22.1</td></tr></table></div>
 <div class="section">
 <h3><a name="Plugin_org.apache.maven.plugins:maven-surefire-report-plugin"></a>Plugin org.apache.maven.plugins:maven-surefire-report-plugin</h3>
 <table border="0" class="bodyTable">
@@ -994,7 +1001,25 @@ APKToolBoxGUI
 <td>jacoco-maven-plugin</td></tr>
 <tr class="b">
 <th width="80%">Current Version</th>
-<td>0.8.2</td></tr></table></div></div>
+<td>0.8.2</td></tr></table></div>
+<div class="section">
+<h3><a name="Plugin_org.sonatype.maven.plugin:emma-maven-plugin"></a>Plugin org.sonatype.maven.plugin:emma-maven-plugin</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<th width="80%">Status</th>
+<td><img src="images/icon_warning_sml.gif" alt="" />&#160;There is at least one newer version available.</td></tr>
+<tr class="b">
+<th width="80%">Group Id</th>
+<td>org.sonatype.maven.plugin</td></tr>
+<tr class="a">
+<th width="80%">Artifact Id</th>
+<td>emma-maven-plugin</td></tr>
+<tr class="b">
+<th width="80%">Current Version</th>
+<td>1.2</td></tr>
+<tr class="a">
+<th width="80%">Newer versions</th>
+<td><b>1.2.0.fixed</b>&#160;<i>Next Version</i></td></tr></table></div></div>
       </div>
     </div>
     <div class="clear">
