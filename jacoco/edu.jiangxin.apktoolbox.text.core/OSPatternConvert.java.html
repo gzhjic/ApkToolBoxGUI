@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OSPatternConvert.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.text.core</a> &gt; <span class="el_source">OSPatternConvert.java</span></div><h1>OSPatternConvert.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.text.core;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/**
+ * 不同操作系统文件格式转换
+ * @author jiangxin
+ */
+<span class="nc" id="L16">public class OSPatternConvert {</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;转换函数的真正实现函数，其它转换函数必须调用此函数。&lt;/p&gt;
+	 * @param srcFileString 源文件的文件名
+	 * @param desFileString 目标文件的文件名
+	 * @param options:换行符，比如:\n,\r,\r\n
+	 * @throws IOException
+	 */
+	private static void convert(String srcFileString,String desFileString,String options) throws IOException {
+		
+<span class="fc" id="L28">		String special = &quot;.OSPattenConvert.temp&quot;; //临时文件的后缀名，尽量保证不会含有同名文件</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">		if(srcFileString.equals(desFileString)) { //如果源文件和目标文件相同（包括路径），则使用临时文件进行转换</span>
+<span class="nc" id="L30">			srcFileString = srcFileString + special;</span>
+<span class="nc" id="L31">			FileProcess.copyFile(desFileString, srcFileString);</span>
+		}
+<span class="fc" id="L33">		File srcFileFile = new File(srcFileString);</span>
+<span class="fc" id="L34">		File desFileFile = new File(desFileString);</span>
+		
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">		if(!srcFileFile.exists()) { //判断源文件是否存在</span>
+<span class="nc" id="L37">			System.out.println(&quot;源文件不存在:&quot; + srcFileFile.getAbsolutePath());</span>
+<span class="nc" id="L38">			return ;</span>
+		}
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		if(!desFileFile.getParentFile().exists()) { //判断目标文件是否存在</span>
+<span class="fc" id="L41">			desFileFile.getParentFile().mkdirs();</span>
+		}
+		
+<span class="fc" id="L44">		BufferedReader reader = new BufferedReader(new FileReader(srcFileFile));</span>
+<span class="fc" id="L45">		BufferedWriter writer = new BufferedWriter(new FileWriter(desFileFile));</span>
+		
+<span class="fc" id="L47">		String temp = null;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">		while((temp=reader.readLine())!=null) {</span>
+<span class="fc" id="L49">			writer.write(temp);</span>
+<span class="fc" id="L50">			writer.write(options);</span>
+		}
+<span class="fc" id="L52">		writer.close();</span>
+<span class="fc" id="L53">		reader.close();</span>
+		
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">		if(srcFileString.equals(desFileString+special)) { //如果存在临时文件，则删除</span>
+<span class="nc" id="L56">			srcFileFile.delete();</span>
+		}
+<span class="fc" id="L58">	}</span>
+	
+	/**
+	 * 其它操作系统文件格式转换成Unix文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	private static void toUnix(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L67">		convert(srcFileString, desFileString, &quot;\n&quot;);</span>
+<span class="fc" id="L68">		System.out.println(&quot;Success to convert &quot; + srcFileString + &quot; to unix&quot;);</span>
+<span class="fc" id="L69">	}</span>
+	
+	/**
+	 * 其它操作系统文件格式转换成Dos文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	private static void toDos(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L78">		convert(srcFileString, desFileString, &quot;\r\n&quot;);</span>
+<span class="fc" id="L79">		System.out.println(&quot;Success to convert &quot; + srcFileString + &quot; to dos&quot;);</span>
+<span class="fc" id="L80">	}</span>
+	
+	/**
+	 * 其它操作系统文件格式转换成Mac文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	private static void toMac(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L89">		convert(srcFileString, desFileString, &quot;\r&quot;);</span>
+<span class="fc" id="L90">		System.out.println(&quot;Success to convert &quot; + srcFileString + &quot; to mac&quot;);</span>
+<span class="fc" id="L91">	}</span>
+	
+	/**
+	 * Dos文件格式转换成Unix文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void dos2Unix(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L100">		toUnix(srcFileString, desFileString);</span>
+<span class="fc" id="L101">	}</span>
+	
+	/**
+	 * Dos文件格式转换成Mac文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void dos2Mac(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L110">		toMac(srcFileString, desFileString);</span>
+<span class="fc" id="L111">	}</span>
+
+	/**
+	 * Unix文件格式转换成Dos文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void unix2Dos(String srcFileString,String desFileString) throws IOException {
+<span class="fc" id="L120">		toDos(srcFileString, desFileString);</span>
+<span class="fc" id="L121">	}</span>
+	
+	/**
+	 * Unix文件格式转换成Mac文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void unix2Mac(String srcFileString,String desFileString) throws IOException {
+<span class="nc" id="L130">		toMac(srcFileString, desFileString);</span>
+<span class="nc" id="L131">	}</span>
+
+	/**
+	 * Mac文件格式转换成Unix文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void mac2Unix(String srcFileString,String desFileString) throws IOException {
+<span class="nc" id="L140">		toUnix(srcFileString, desFileString);</span>
+<span class="nc" id="L141">	}</span>
+	
+	/**
+	 * Mac文件格式转换成Dos文件格式.
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @throws IOException
+	 */
+	public static void mac2Dos(String srcFileString,String desFileString) throws IOException {
+<span class="nc" id="L150">		toDos(srcFileString, desFileString);</span>
+<span class="nc" id="L151">	}</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;从一个操作系统文件格式转向另一个，转换模式有patter指定，pattern的格式为：&lt;/p&gt;
+	 * &lt;p style=&quot;text-indent:4em&quot;&gt;os_a2os_b os_a和os_b的可能取值为linux/dos/windows/mac/unix/bsd等&lt;/p&gt;
+	 * @param srcFileString 转换前的文件
+	 * @param desFileString 转换后的文件
+	 * @param pattern 转换模式
+	 * @throws IOException
+	 */
+	public static void osFileConvert(String srcFileString,String desFileString,String pattern) throws IOException {
+		
+<span class="fc" id="L164">		pattern = pattern.toLowerCase(); //允许输入大写字母格式的转换模式</span>
+<span class="fc" id="L165">		pattern = pattern.replace(&quot;to&quot;, &quot;2&quot;); //替换pattern中的to，防止误输入</span>
+<span class="fc" id="L166">		pattern = pattern.replace(&quot;linux&quot;, &quot;unix&quot;); //由于linux和unix文件格式相同，所以直接用unix替换linux，但会产生unix2unix类型</span>
+<span class="fc" id="L167">		pattern = pattern.replace(&quot;bsd&quot;, &quot;unix&quot;); //由于bsd和unix文件格式相同，所以直接用unix替换linux，但会产生unix2unix类型</span>
+<span class="fc" id="L168">		pattern = pattern.replace(&quot;windows&quot;, &quot;dos&quot;); //由于windows和dos文件格式相同，所以直接用unix替换linux，但会产生dos2dos类型</span>
+<span class="pc bpc" id="L169" title="2 of 8 branches missed.">		boolean isToUnix = pattern.equals(&quot;2unix&quot;) || pattern.equals(&quot;mac2unix&quot;) ||pattern.equals(&quot;dos2unix&quot;) || pattern.equals(&quot;unix2unix&quot;);</span>
+<span class="pc bpc" id="L170" title="2 of 6 branches missed.">		boolean isToMac = pattern.equals(&quot;2mac&quot;) ||pattern.equals(&quot;dos2mac&quot;) || pattern.equals(&quot;unix2mac&quot;);</span>
+<span class="pc bpc" id="L171" title="3 of 8 branches missed.">		boolean isToDos = pattern.equals(&quot;2dos&quot;) ||pattern.equals(&quot;mac2dos&quot;) || pattern.equals(&quot;unix2dos&quot;) || pattern.equals(&quot;dos2dos&quot;);</span>
+		
+<span class="fc bfc" id="L173" title="All 2 branches covered.">		if(isToUnix) {</span>
+<span class="fc" id="L174">			toUnix(srcFileString, desFileString);</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">		} else if(isToDos) {</span>
+<span class="fc" id="L176">			toDos(srcFileString, desFileString);</span>
+<span class="pc bpc" id="L177" title="1 of 2 branches missed.">		} else if(isToMac) {</span>
+<span class="fc" id="L178">			toMac(srcFileString, desFileString);</span>
+		} else{
+<span class="nc" id="L180">			System.err.println(&quot;Error input,can't convert!&quot;);</span>
+		}
+<span class="fc" id="L182">	}</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;从一个操作系统文件格式转向另一个，转换模式有patter指定，pattern的格式为：&lt;/p&gt;
+	 * &lt;p style=&quot;text-indent:4em&quot;&gt;os_a2os_b os_a和os_b的可能取值为linux/dos/windows/mac/unix/bsd等&lt;/p&gt;
+	 * @param fileString 需要转换的文件
+	 * @param pattern 转换模式
+	 * @see #osFileConvert(String, String, String)
+	 * @throws IOException
+	 */
+	public static void osFileConvert(String fileString,String pattern) throws IOException {
+<span class="nc" id="L194">		osFileConvert(fileString,fileString,pattern);</span>
+<span class="nc" id="L195">	}</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;转换的对象为指定目录中的所有以后缀suffix指定的文件&lt;/p&gt;
+	 * @param srcDirString 要求转换的目录
+	 * @param desDirString 转化后要存放的目录
+	 * @param pattern 转换模式
+	 * @see #osFileConvert(String, String, String)
+	 * @param suffix 过滤特定文件后缀
+	 * @throws IOException
+	 */
+	public static void osDirConvert(String srcDirString,String desDirString,String pattern,String suffix) throws IOException {
+<span class="fc" id="L208">		File srcDirFile = new File(srcDirString);</span>
+<span class="fc" id="L209">		File desDirFile = new File(desDirString);</span>
+<span class="pc bpc" id="L210" title="1 of 2 branches missed.">		if(!srcDirFile.exists()) {</span>
+<span class="nc" id="L211">			System.out.println(&quot;源目录不存在&quot; + srcDirFile.getAbsolutePath());</span>
+		}
+<span class="fc" id="L213">		ArrayList&lt;File&gt; arrayList = new FileFilterWrapper().list(srcDirString, suffix);</span>
+<span class="fc" id="L214">		Iterator&lt;File&gt; it = arrayList.iterator();</span>
+<span class="fc bfc" id="L215" title="All 2 branches covered.">		while(it.hasNext()) {</span>
+<span class="fc" id="L216">			File srcFileFile = it.next();</span>
+			
+<span class="fc" id="L218">			String srcFileString = srcFileFile.getAbsolutePath(); //得到源文件绝对地址</span>
+			//System.out.println(&quot;srcFileString&quot; + srcFileString);
+			
+<span class="fc" id="L221">			String temp = srcFileFile.getAbsolutePath().substring(srcDirFile.getAbsolutePath().toString().length());</span>
+			//System.out.println(&quot;temp&quot; + temp);
+			
+<span class="fc" id="L224">			String desFileString = desDirFile.getAbsolutePath() + temp; //得到目标文件绝对地址</span>
+			//System.out.println(&quot;desFileString&quot; + desFileString);
+			
+<span class="fc" id="L227">			osFileConvert(srcFileString, desFileString, pattern);</span>
+<span class="fc" id="L228">		}</span>
+		
+<span class="fc" id="L230">	}</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;转换的对象为指定目录中的所有文件&lt;/p&gt;
+	 * @param srcDirString 要求转换的目录
+	 * @param desDirString 转化后要存放的目录
+	 * @param pattern 转换模式
+	 * @see #osFileConvert(String, String, String)
+	 * @throws IOException
+	 */
+	public static void osDirConvert(String srcDirString,String desDirString,String pattern) throws IOException {
+<span class="fc" id="L242">		osDirConvert(srcDirString, desDirString, pattern, null);</span>
+<span class="fc" id="L243">	}</span>
+	
+	/**
+	 * 不同操作系统文件格式之间的转换.
+	 * &lt;p style=&quot;text-indent:2em&quot;&gt;转换的对象为文件列表&lt;/p&gt;
+	 * @param files 要转换是文件列表
+	 * @param pattern 转换模式
+	 * @see #osFileConvert(String, String, String)
+	 * @throws IOException
+	 */
+	public static void osConvertFiles(ArrayList&lt;File&gt; files,String pattern) throws IOException {
+<span class="nc" id="L254">		Iterator&lt;File&gt; it = files.iterator();</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">		while(it.hasNext()) {</span>
+<span class="nc" id="L256">			osFileConvert(it.next().getAbsolutePath(), pattern);</span>
+		}
+<span class="nc" id="L258">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

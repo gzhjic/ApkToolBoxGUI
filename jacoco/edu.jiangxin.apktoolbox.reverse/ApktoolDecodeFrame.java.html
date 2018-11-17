@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApktoolDecodeFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.reverse</a> &gt; <span class="el_source">ApktoolDecodeFrame.java</span></div><h1>ApktoolDecodeFrame.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.reverse;
+
+import java.awt.HeadlessException;
+import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import org.apache.commons.io.FilenameUtils;
+
+import edu.jiangxin.apktoolbox.swing.extend.JEasyFrame;
+import edu.jiangxin.apktoolbox.utils.StreamHandler;
+import edu.jiangxin.apktoolbox.utils.Utils;
+
+public class ApktoolDecodeFrame extends JEasyFrame {
+
+	private static final long serialVersionUID = 1L;
+
+	public ApktoolDecodeFrame() throws HeadlessException {
+<span class="nc" id="L31">		super();</span>
+<span class="nc" id="L32">		setTitle(&quot;Apktool Decode&quot;);</span>
+<span class="nc" id="L33">		setSize(600, 160);</span>
+<span class="nc" id="L34">		setResizable(false);</span>
+
+<span class="nc" id="L36">		JPanel contentPane = new JPanel();</span>
+<span class="nc" id="L37">		contentPane.setBorder(new EmptyBorder(10, 10, 10, 10));</span>
+<span class="nc" id="L38">		BoxLayout boxLayout = new BoxLayout(contentPane, BoxLayout.Y_AXIS);</span>
+<span class="nc" id="L39">		contentPane.setLayout(boxLayout);</span>
+<span class="nc" id="L40">		setContentPane(contentPane);</span>
+
+<span class="nc" id="L42">		JPanel sourcePanel = new JPanel();</span>
+<span class="nc" id="L43">		sourcePanel.setLayout(new BoxLayout(sourcePanel, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L44">		contentPane.add(sourcePanel);</span>
+
+<span class="nc" id="L46">		JTextField srcTextField = new JTextField();</span>
+<span class="nc" id="L47">		srcTextField.setText(conf.getString(&quot;apktool.decode.src.file&quot;));</span>
+
+<span class="nc" id="L49">		JButton srcButton = new JButton(&quot;Source File&quot;);</span>
+<span class="nc" id="L50">		srcButton.addMouseListener(new MouseAdapter() {</span>
+			@Override
+			public void mousePressed(MouseEvent e) {
+<span class="nc" id="L53">				super.mousePressed(e);</span>
+<span class="nc" id="L54">				JFileChooser jfc = new JFileChooser();</span>
+<span class="nc" id="L55">				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);</span>
+<span class="nc" id="L56">				jfc.setDialogTitle(&quot;select a file&quot;);</span>
+<span class="nc" id="L57">				int ret = jfc.showDialog(new JLabel(), null);</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">				switch (ret) {</span>
+				case JFileChooser.APPROVE_OPTION:
+<span class="nc" id="L60">					File file = jfc.getSelectedFile();</span>
+<span class="nc" id="L61">					srcTextField.setText(file.getAbsolutePath());</span>
+<span class="nc" id="L62">					break;</span>
+				default:
+					break;
+				}
+
+<span class="nc" id="L67">			}</span>
+		});
+
+<span class="nc" id="L70">		sourcePanel.add(srcTextField);</span>
+<span class="nc" id="L71">		sourcePanel.add(srcButton);</span>
+
+<span class="nc" id="L73">		JPanel targetPanel = new JPanel();</span>
+<span class="nc" id="L74">		targetPanel.setLayout(new BoxLayout(targetPanel, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L75">		contentPane.add(targetPanel);</span>
+
+<span class="nc" id="L77">		JTextField targetTextField = new JTextField();</span>
+<span class="nc" id="L78">		targetTextField.setText(conf.getString(&quot;apktool.decode.target.dir&quot;));</span>
+
+<span class="nc" id="L80">		JButton targetButton = new JButton(&quot;Save Dir&quot;);</span>
+<span class="nc" id="L81">		targetButton.addMouseListener(new MouseAdapter() {</span>
+			@Override
+			public void mousePressed(MouseEvent e) {
+<span class="nc" id="L84">				super.mousePressed(e);</span>
+<span class="nc" id="L85">				JFileChooser jfc = new JFileChooser();</span>
+<span class="nc" id="L86">				jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);</span>
+<span class="nc" id="L87">				jfc.setDialogTitle(&quot;save to&quot;);</span>
+<span class="nc" id="L88">				int ret = jfc.showDialog(new JLabel(), null);</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">				switch (ret) {</span>
+				case JFileChooser.APPROVE_OPTION:
+<span class="nc" id="L91">					File file = jfc.getSelectedFile();</span>
+<span class="nc" id="L92">					targetTextField.setText(file.getAbsolutePath());</span>
+<span class="nc" id="L93">					break;</span>
+
+				default:
+					break;
+				}
+
+<span class="nc" id="L99">			}</span>
+		});
+
+<span class="nc" id="L102">		targetPanel.add(targetTextField);</span>
+<span class="nc" id="L103">		targetPanel.add(targetButton);</span>
+
+<span class="nc" id="L105">		JPanel optionPanel = new JPanel();</span>
+<span class="nc" id="L106">		optionPanel.setLayout(new BoxLayout(optionPanel, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L107">		contentPane.add(optionPanel);</span>
+
+<span class="nc" id="L109">		JCheckBox resouceIgnore = new JCheckBox(&quot;Ignore res&quot;);</span>
+<span class="nc" id="L110">		resouceIgnore.setSelected(false);</span>
+<span class="nc" id="L111">		optionPanel.add(resouceIgnore);</span>
+		
+<span class="nc" id="L113">		JCheckBox override = new JCheckBox(&quot;Override&quot;);</span>
+<span class="nc" id="L114">		override.setSelected(true);</span>
+<span class="nc" id="L115">		optionPanel.add(override);</span>
+
+<span class="nc" id="L117">		JPanel operationPanel = new JPanel();</span>
+<span class="nc" id="L118">		operationPanel.setLayout(new BoxLayout(operationPanel, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L119">		contentPane.add(operationPanel);</span>
+
+<span class="nc" id="L121">		JButton sceenshotButton = new JButton(&quot;Decode&quot;);</span>
+<span class="nc" id="L122">		sceenshotButton.addMouseListener(new MouseAdapter() {</span>
+			@Override
+			public void mousePressed(MouseEvent e) {
+<span class="nc" id="L125">				super.mousePressed(e);</span>
+<span class="nc" id="L126">				File srcFile = new File(srcTextField.getText());</span>
+<span class="nc bnc" id="L127" title="All 4 branches missed.">				if (!srcFile.exists() || !srcFile.isFile()) {</span>
+<span class="nc" id="L128">					logger.error(&quot;srcFile is invalid&quot;);</span>
+<span class="nc" id="L129">					Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L130">					JOptionPane.showMessageDialog(ApktoolDecodeFrame.this, &quot;Source file is invalid&quot;, &quot;ERROR&quot;,</span>
+							JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L132">					srcTextField.requestFocus();</span>
+<span class="nc" id="L133">					return;</span>
+				}
+				String srcPath;
+				try {
+<span class="nc" id="L137">					srcPath = srcFile.getCanonicalPath();</span>
+<span class="nc" id="L138">				} catch (IOException e2) {</span>
+<span class="nc" id="L139">					logger.error(&quot;getCanonicalPath fail&quot;);</span>
+<span class="nc" id="L140">					return;</span>
+<span class="nc" id="L141">				}</span>
+<span class="nc" id="L142">				conf.setProperty(&quot;apktool.decode.src.file&quot;, srcPath);</span>
+<span class="nc" id="L143">				File targetFile = new File(targetTextField.getText());</span>
+<span class="nc bnc" id="L144" title="All 4 branches missed.">				if (!targetFile.exists() || !targetFile.isDirectory()) {</span>
+<span class="nc" id="L145">					logger.error(&quot;targetFile is invalid&quot;);</span>
+<span class="nc" id="L146">					Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L147">					JOptionPane.showMessageDialog(ApktoolDecodeFrame.this, &quot;Target directory is invalid&quot;, &quot;ERROR&quot;,</span>
+							JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L149">					targetTextField.requestFocus();</span>
+<span class="nc" id="L150">					return;</span>
+				}
+				String targetPath;
+				try {
+<span class="nc" id="L154">					targetPath = targetFile.getCanonicalPath();</span>
+<span class="nc" id="L155">				} catch (IOException e2) {</span>
+<span class="nc" id="L156">					logger.error(&quot;getCanonicalPath fail&quot;);</span>
+<span class="nc" id="L157">					return;</span>
+<span class="nc" id="L158">				}</span>
+<span class="nc" id="L159">				conf.setProperty(&quot;apktool.decode.target.dir&quot;, targetPath);</span>
+				try {
+<span class="nc" id="L161">					StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L162">					sb.append(&quot;java -jar \&quot;-Duser.language=en\&quot; \&quot;-Dfile.encoding=UTF8\&quot;&quot;)</span>
+<span class="nc" id="L163">							.append(&quot; \&quot;&quot;).append(Utils.getToolsPath()).append(File.separator).append(&quot;apktool_2.3.3.jar\&quot;&quot;)</span>
+<span class="nc" id="L164">							.append(&quot; d &quot;).append(srcPath)</span>
+<span class="nc" id="L165">							.append(&quot; -o &quot;).append(targetPath).append(File.separator)</span>
+<span class="nc" id="L166">							.append(FilenameUtils.getBaseName(srcFile.getCanonicalPath()));</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">					if (resouceIgnore.isSelected()) {</span>
+<span class="nc" id="L168">						sb.append(&quot; -r&quot;);</span>
+					}
+<span class="nc bnc" id="L170" title="All 2 branches missed.">					if (override.isSelected()) {</span>
+<span class="nc" id="L171">						sb.append(&quot; -f&quot;);</span>
+					}
+<span class="nc" id="L173">					String cmd = sb.toString();</span>
+<span class="nc" id="L174">					logger.info(cmd);</span>
+<span class="nc" id="L175">					Process process = Runtime.getRuntime().exec(cmd);</span>
+<span class="nc" id="L176">					new StreamHandler(process.getInputStream(), 0).start();</span>
+<span class="nc" id="L177">					new StreamHandler(process.getErrorStream(), 1).start();</span>
+<span class="nc" id="L178">					process.waitFor();</span>
+<span class="nc" id="L179">					logger.info(&quot;decode finish&quot;);</span>
+<span class="nc" id="L180">				} catch (IOException | InterruptedException e1) {</span>
+<span class="nc" id="L181">					logger.error(&quot;decode fail&quot;, e);</span>
+<span class="nc" id="L182">				}</span>
+<span class="nc" id="L183">			}</span>
+		});
+
+<span class="nc" id="L186">		operationPanel.add(sceenshotButton);</span>
+<span class="nc" id="L187">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
