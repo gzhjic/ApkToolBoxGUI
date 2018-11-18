@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JEasyFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.swing.extend</a> &gt; <span class="el_source">JEasyFrame.java</span></div><h1>JEasyFrame.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.swing.extend;
+
+import java.awt.HeadlessException;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.ResourceBundle;
+
+import javax.swing.JFrame;
+
+import org.apache.commons.configuration2.Configuration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import edu.jiangxin.apktoolbox.utils.Utils;
+
+public class JEasyFrame extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	protected Logger logger;
+	protected Configuration conf;
+	protected ResourceBundle bundle;
+
+	public JEasyFrame() throws HeadlessException {
+<span class="nc" id="L24">		super();</span>
+<span class="nc" id="L25">		logger = LogManager.getLogger(this.getClass().getSimpleName());</span>
+<span class="nc" id="L26">		conf = Utils.getConfiguration();</span>
+<span class="nc" id="L27">		bundle = ResourceBundle.getBundle(&quot;apktoolbox&quot;);</span>
+<span class="nc" id="L28">		addWindowListener(new WindowAdapter() {</span>
+			@Override
+			public void windowClosing(WindowEvent e) {
+<span class="nc" id="L31">				super.windowClosing(e);</span>
+<span class="nc" id="L32">				Utils.saveConfiguration();</span>
+<span class="nc" id="L33">				logger.info(&quot;Frame stop: &quot; + JEasyFrame.this.getClass().getSimpleName());</span>
+<span class="nc" id="L34">			}</span>
+		});
+<span class="nc" id="L36">		logger.info(&quot;Frame start: &quot; + this.getClass().getSimpleName());</span>
+<span class="nc" id="L37">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

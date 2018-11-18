@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Common.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.monkey</a> &gt; <span class="el_source">Common.java</span></div><h1>Common.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.monkey;
+
+<span class="nc" id="L3">public class Common {</span>
+
+	/**
+	 * 日志文件路径
+	 */
+<span class="nc" id="L8">	public static String Log_Path = &quot;C:\\JK\\monkey_log\\&quot;;</span>
+
+	/**
+	 * 日志文件名称
+	 */
+	public static final String Log_name = &quot;java_monkey_log&quot;;
+
+	public static final String Hour = &quot;时&quot;;
+	public static final String Minute = &quot;分&quot;;
+	public static final String Second = &quot;秒&quot;;
+
+	public static final String CMD_Devices = &quot;adb devices&quot;;
+	public static final String CMD_Program_A = &quot;adb -s &quot;;
+	public static final String CMD_Program_B = &quot; shell ls data/data&quot;;
+	public static final String CMD_PS_A = &quot;adb -s &quot;;
+	public static final String CMD_PS_B = &quot; shell ps&quot;;
+	public static final String CMD_Kill_A = &quot;adb -s &quot;;
+	public static final String CMD_Kill_B = &quot; shell kill &quot;;
+
+	public static final String Shinow = &quot;shinow&quot;;
+	public static final String Root = &quot;root&quot;;
+	public static final String Monkey = &quot;com.android.commands.monkey&quot;;
+	public static final String Donor = &quot;com.shinow.donor&quot;;
+
+	public static final String Ignore_Crashes = &quot; --ignore-crashes&quot;;
+	public static final String Ignore_Timeouts = &quot; --ignore-timeouts&quot;;
+	public static final String Monitor_Native_Crashes = &quot; --monitor-native-crashes&quot;;
+	public static final String Ignore_Security_Exceptions = &quot; --ignore-security-exceptions&quot;;
+	public static final String Kill_Process_After_Error = &quot; --kill-process-after-error&quot;;
+	public static final String Wait_Dbg = &quot; --wait-dbg&quot;;
+	public static final String Hprof = &quot; --hprof&quot;;
+
+	public static final String Level_0 = &quot; -v &quot;;
+	public static final String Level_1 = &quot; -v -v &quot;;
+	public static final String Level_2 = &quot; -v -v -v &quot;;
+
+	public static final String TransactionCount = &quot;9999&quot;;
+
+	/**
+	 * 替换完成！！！
+	 */
+	public static final String Msg1 = &quot;执行完毕！！！&quot;;
+
+	/**
+	 * 设备列表不能为空！
+	 */
+	public static final String Msg4 = &quot;设备列表不能为空！请[刷新]！&quot;;
+
+	/**
+	 * 应用程序不能为空！
+	 */
+	public static final String Msg5 = &quot;应用程序不能为空！请选其他设备！&quot;;
+
+	/**
+	 * 事件间隔或时间数量不能为空！
+	 */
+	public static final String Msg2 = &quot;事件间隔或时间数量不能为空！&quot;;
+
+	/**
+	 * 日志保存路径不能为空！
+	 */
+	public static final String Msg6 = &quot;日志保存路径不能为空！&quot;;
+
+	/**
+	 * 约束条件都设置为空吗？
+	 */
+	public static final String Msg3 = &quot;约束条件都设置为空吗？&quot;;
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

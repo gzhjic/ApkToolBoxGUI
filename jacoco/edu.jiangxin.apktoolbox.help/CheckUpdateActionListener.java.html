@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckUpdateActionListener.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.help</a> &gt; <span class="el_source">CheckUpdateActionListener.java</span></div><h1>CheckUpdateActionListener.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.help;
+
+import java.awt.Component;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.ParseException;
+import org.apache.http.StatusLine;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import edu.jiangxin.apktoolbox.Version;
+
+public class CheckUpdateActionListener implements ActionListener {
+	private static final String URI = &quot;https://api.github.com/repos/jiangxincode/ApkToolBoxGUI/releases/latest&quot;;
+<span class="nc" id="L29">	private static Logger logger = LogManager.getLogger(CheckUpdateActionListener.class);</span>
+	private Component parent;
+	private CloseableHttpClient closeableHttpClient;
+	private CloseableHttpResponse closeableHttpResponse;
+
+	public CheckUpdateActionListener(Component component) {
+<span class="nc" id="L35">		super();</span>
+<span class="nc" id="L36">		parent = component;</span>
+<span class="nc" id="L37">	}</span>
+
+	private void processException(Exception ex) {
+<span class="nc" id="L40">		logger.error(&quot;checking for updates failed: &quot;, ex);</span>
+<span class="nc" id="L41">		Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L42">		JOptionPane.showMessageDialog(parent, &quot;checking for updates failed&quot;, &quot;ERROR&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L43">		releaseResource();</span>
+<span class="nc" id="L44">	}</span>
+
+	private void processResult(String latestVersion) {
+<span class="nc" id="L47">		logger.info(&quot;checking for updates successed&quot;);</span>
+<span class="nc" id="L48">		Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L49">		JOptionPane.showMessageDialog(parent,</span>
+				&quot;Latest version: &quot; + latestVersion + &quot;\nLocal version: &quot; + Version.VERSION, &quot;Update&quot;,
+				JOptionPane.INFORMATION_MESSAGE);
+<span class="nc" id="L52">		releaseResource();</span>
+<span class="nc" id="L53">	}</span>
+
+	private void releaseResource() {
+<span class="nc bnc" id="L56" title="All 2 branches missed.">		if (closeableHttpResponse != null) {</span>
+			try {
+<span class="nc" id="L58">				closeableHttpResponse.close();</span>
+<span class="nc" id="L59">			} catch (IOException e) {</span>
+<span class="nc" id="L60">				logger.error(&quot;closeableHttpResponse close failed&quot;, e);</span>
+<span class="nc" id="L61">			}</span>
+		}
+<span class="nc bnc" id="L63" title="All 2 branches missed.">		if (closeableHttpClient != null) {</span>
+			try {
+<span class="nc" id="L65">				closeableHttpClient.close();</span>
+<span class="nc" id="L66">			} catch (IOException e) {</span>
+<span class="nc" id="L67">				logger.error(&quot;closeableHttpClient close failed&quot;, e);</span>
+<span class="nc" id="L68">			}</span>
+		}
+<span class="nc" id="L70">	}</span>
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L74">		String responseString = null;</span>
+
+<span class="nc" id="L76">		closeableHttpClient = HttpClients.createDefault();</span>
+
+		try {
+<span class="nc" id="L79">			closeableHttpResponse = closeableHttpClient.execute(new HttpGet(URI));</span>
+<span class="nc" id="L80">		} catch (IOException ex) {</span>
+<span class="nc" id="L81">			processException(ex);</span>
+<span class="nc" id="L82">			return;</span>
+<span class="nc" id="L83">		}</span>
+
+<span class="nc" id="L85">		StatusLine statusLine = closeableHttpResponse.getStatusLine();</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		if (statusLine == null) {</span>
+<span class="nc" id="L87">			processException(new Exception(&quot;statusLine is null&quot;));</span>
+<span class="nc" id="L88">			return;</span>
+		}
+
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		if (statusLine.getStatusCode() == 200) {</span>
+<span class="nc" id="L92">			HttpEntity entity = closeableHttpResponse.getEntity();</span>
+			try {
+<span class="nc" id="L94">				responseString = EntityUtils.toString(entity);</span>
+<span class="nc" id="L95">				logger.info(responseString);</span>
+<span class="nc" id="L96">			} catch (ParseException | IOException ex) {</span>
+<span class="nc" id="L97">				processException(ex);</span>
+<span class="nc" id="L98">				return;</span>
+<span class="nc" id="L99">			}</span>
+<span class="nc" id="L100">		} else {</span>
+<span class="nc" id="L101">			processException(new Exception(&quot;invalid statusCode&quot;));</span>
+<span class="nc" id="L102">			return;</span>
+		}
+
+		JSONObject release;
+		try {
+<span class="nc" id="L107">			release = new JSONObject(responseString);</span>
+<span class="nc" id="L108">		} catch (JSONException ex) {</span>
+<span class="nc" id="L109">			processException(ex);</span>
+<span class="nc" id="L110">			return;</span>
+<span class="nc" id="L111">		}</span>
+<span class="nc" id="L112">		String latestVersion = release.getString(&quot;tag_name&quot;);</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		if (StringUtils.isEmpty(latestVersion)) {</span>
+<span class="nc" id="L114">			processException(new Exception(&quot;latestVersion is empyt&quot;));</span>
+<span class="nc" id="L115">			return;</span>
+		}
+<span class="nc" id="L117">		processResult(latestVersion);</span>
+<span class="nc" id="L118">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
