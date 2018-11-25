@@ -26,7 +26,7 @@ under the License.
     <copyright>&#169;2018</copyright>
     <item>
       <title>File: 48,
-             Errors: 1287,
+             Errors: 1283,
              Warnings: 0,
              Infos: 0
       </title>
@@ -210,6 +210,20 @@ under the License.
                 </td>
                 <td>
                   29
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#apktoolbox_zh.properties">apktoolbox_zh.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
                 </td>
               </tr>
                           <tr>
@@ -574,20 +588,6 @@ under the License.
                 </td>
                 <td>
                   411
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.Version.java">edu/jiangxin/apktoolbox/Version.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
                 </td>
               </tr>
                           <tr>

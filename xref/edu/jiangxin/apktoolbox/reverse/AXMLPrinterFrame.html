@@ -35,10 +35,10 @@
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> edu.jiangxin.apktoolbox.utils.StreamHandler;
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> edu.jiangxin.apktoolbox.utils.Utils;
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>  
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.html">AXMLPrinterFrame</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html">JEasyFrame</a> {
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="AXMLPrinterFrame" href="../../../../edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.html#AXMLPrinterFrame">AXMLPrinterFrame</a> <strong class="jxr_keyword">extends</strong> <a name="JEasyFrame" href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html#JEasyFrame">JEasyFrame</a> {
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1L;
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.html">AXMLPrinterFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  	<strong class="jxr_keyword">public</strong> <a name="AXMLPrinterFrame" href="../../../../edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.html#AXMLPrinterFrame">AXMLPrinterFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>  		setTitle(<span class="jxr_string">"AXMLPrinter3"</span>);
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>  		setSize(600, 120);
@@ -179,7 +179,7 @@
 <a class="jxr_linenumber" name="L171" href="#L171">171</a> 					Process process = Runtime.getRuntime().exec(cmd);
 <a class="jxr_linenumber" name="L172" href="#L172">172</a> 					String content = Utils.loadStream(process.getInputStream());
 <a class="jxr_linenumber" name="L173" href="#L173">173</a> 					FileUtils.writeStringToFile(<strong class="jxr_keyword">new</strong> File(targetFile, <span class="jxr_string">"AndroidManifest.xml"</span>), content, <span class="jxr_string">"UTF-8"</span>, <strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L174" href="#L174">174</a> 					<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html">StreamHandler</a>(process.getErrorStream(), 1).start();
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 					<strong class="jxr_keyword">new</strong> <a name="StreamHandler" href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html#StreamHandler">StreamHandler</a>(process.getErrorStream(), 1).start();
 <a class="jxr_linenumber" name="L175" href="#L175">175</a> 					process.waitFor();
 <a class="jxr_linenumber" name="L176" href="#L176">176</a> 					logger.info(<span class="jxr_string">"axmlprinter finish"</span>);
 <a class="jxr_linenumber" name="L177" href="#L177">177</a> 				} <strong class="jxr_keyword">catch</strong> (IOException | InterruptedException e1) {

@@ -30,11 +30,11 @@
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> edu.jiangxin.apktoolbox.utils.StreamHandler;
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> edu.jiangxin.apktoolbox.utils.Utils;
 <a class="jxr_linenumber" name="L24" href="#L24">24</a>  
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html">ApktoolRebuildFrame</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html">JEasyFrame</a> {
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ApktoolRebuildFrame" href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html#ApktoolRebuildFrame">ApktoolRebuildFrame</a> <strong class="jxr_keyword">extends</strong> <a name="JEasyFrame" href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html#JEasyFrame">JEasyFrame</a> {
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1L;
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  	
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html">ApktoolRebuildFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  	<strong class="jxr_keyword">public</strong> <a name="ApktoolRebuildFrame" href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html#ApktoolRebuildFrame">ApktoolRebuildFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>  		setTitle(<span class="jxr_string">"Apktool Rebuild"</span>);
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  		setSize(600, 160);
@@ -93,7 +93,7 @@
 <a class="jxr_linenumber" name="L85" href="#L85">85</a>  				jfc.setDialogType(JFileChooser.SAVE_DIALOG);
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>  				jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>  				jfc.setDialogTitle(<span class="jxr_string">"save to"</span>);
-<a class="jxr_linenumber" name="L88" href="#L88">88</a>  				jfc.setFileFilter(<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html">APKFileFilter</a>());
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  				jfc.setFileFilter(<strong class="jxr_keyword">new</strong> APKFileFilter());
 <a class="jxr_linenumber" name="L89" href="#L89">89</a>  				<strong class="jxr_keyword">int</strong> ret = jfc.showDialog(<strong class="jxr_keyword">new</strong> JLabel(), <strong class="jxr_keyword">null</strong>);
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>  				<strong class="jxr_keyword">switch</strong> (ret) {
 <a class="jxr_linenumber" name="L91" href="#L91">91</a>  				<strong class="jxr_keyword">case</strong> JFileChooser.APPROVE_OPTION:
@@ -172,8 +172,8 @@
 <a class="jxr_linenumber" name="L164" href="#L164">164</a> 					String cmd = sb.toString();
 <a class="jxr_linenumber" name="L165" href="#L165">165</a> 					logger.info(cmd);
 <a class="jxr_linenumber" name="L166" href="#L166">166</a> 					Process process1 = Runtime.getRuntime().exec(cmd);
-<a class="jxr_linenumber" name="L167" href="#L167">167</a> 					<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html">StreamHandler</a>(process1.getInputStream(), 0).start();
-<a class="jxr_linenumber" name="L168" href="#L168">168</a> 					<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html">StreamHandler</a>(process1.getErrorStream(), 1).start();
+<a class="jxr_linenumber" name="L167" href="#L167">167</a> 					<strong class="jxr_keyword">new</strong> <a name="StreamHandler" href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html#StreamHandler">StreamHandler</a>(process1.getInputStream(), 0).start();
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> 					<strong class="jxr_keyword">new</strong> <a name="StreamHandler" href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html#StreamHandler">StreamHandler</a>(process1.getErrorStream(), 1).start();
 <a class="jxr_linenumber" name="L169" href="#L169">169</a> 					process1.waitFor();
 <a class="jxr_linenumber" name="L170" href="#L170">170</a> 					logger.info(<span class="jxr_string">"rebuild finish"</span>);
 <a class="jxr_linenumber" name="L171" href="#L171">171</a> 					<strong class="jxr_keyword">if</strong> (signAPK.isSelected()) {
@@ -185,8 +185,8 @@
 <a class="jxr_linenumber" name="L177" href="#L177">177</a> 						cmd = sb.toString();
 <a class="jxr_linenumber" name="L178" href="#L178">178</a> 						logger.info(cmd);
 <a class="jxr_linenumber" name="L179" href="#L179">179</a> 						Process process2 = Runtime.getRuntime().exec(cmd);
-<a class="jxr_linenumber" name="L180" href="#L180">180</a> 						<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html">StreamHandler</a>(process2.getInputStream(), 0).start();
-<a class="jxr_linenumber" name="L181" href="#L181">181</a> 						<strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html">StreamHandler</a>(process2.getErrorStream(), 1).start();
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 						<strong class="jxr_keyword">new</strong> <a name="StreamHandler" href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html#StreamHandler">StreamHandler</a>(process2.getInputStream(), 0).start();
+<a class="jxr_linenumber" name="L181" href="#L181">181</a> 						<strong class="jxr_keyword">new</strong> <a name="StreamHandler" href="../../../../edu/jiangxin/apktoolbox/utils/StreamHandler.html#StreamHandler">StreamHandler</a>(process2.getErrorStream(), 1).start();
 <a class="jxr_linenumber" name="L182" href="#L182">182</a> 						process1.waitFor();
 <a class="jxr_linenumber" name="L183" href="#L183">183</a> 						logger.info(<span class="jxr_string">"apksign finish"</span>);
 <a class="jxr_linenumber" name="L184" href="#L184">184</a> 					}
@@ -199,7 +199,7 @@
 <a class="jxr_linenumber" name="L191" href="#L191">191</a> 		operationPanel.add(sceenshotButton);
 <a class="jxr_linenumber" name="L192" href="#L192">192</a> 	}
 <a class="jxr_linenumber" name="L193" href="#L193">193</a> 	
-<a class="jxr_linenumber" name="L194" href="#L194">194</a> 	<strong class="jxr_keyword">class</strong> <a href="../../../../edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.html">APKFileFilter</a> <strong class="jxr_keyword">extends</strong> FileFilter {
+<a class="jxr_linenumber" name="L194" href="#L194">194</a> 	<strong class="jxr_keyword">class</strong> APKFileFilter <strong class="jxr_keyword">extends</strong> FileFilter {
 <a class="jxr_linenumber" name="L195" href="#L195">195</a> 
 <a class="jxr_linenumber" name="L196" href="#L196">196</a> 		 @Override
 <a class="jxr_linenumber" name="L197" href="#L197">197</a> 		 <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> accept(File f) {

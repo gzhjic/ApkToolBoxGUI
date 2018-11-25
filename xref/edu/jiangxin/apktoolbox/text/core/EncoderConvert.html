@@ -24,7 +24,7 @@
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment"> * @author jiangxin</em>
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../edu/jiangxin/apktoolbox/text/core/EncoderConvert.html">EncoderConvert</a> {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="EncoderConvert" href="../../../../../edu/jiangxin/apktoolbox/text/core/EncoderConvert.html#EncoderConvert">EncoderConvert</a> {
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>  
 <a class="jxr_linenumber" name="L21" href="#L21">21</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment">	 * 实现对文件的编码转换.</em>
@@ -90,7 +90,7 @@
 <a class="jxr_linenumber" name="L82" href="#L82">82</a>  			String desDirString, String desEncoder,String suffix) <strong class="jxr_keyword">throws</strong> IOException {
 <a class="jxr_linenumber" name="L83" href="#L83">83</a>  		<em class="jxr_comment">//File srcDirFile = new File(srcDirString);</em>
 <a class="jxr_linenumber" name="L84" href="#L84">84</a>  		File desDirFile = <strong class="jxr_keyword">new</strong> File(desDirString);
-<a class="jxr_linenumber" name="L85" href="#L85">85</a>  		ArrayList&lt;File&gt; files = <strong class="jxr_keyword">new</strong> <a href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html">FileFilterWrapper</a>().list(srcDirString, suffix); <em class="jxr_comment">// 获取所有符合条件的文件</em>
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  		ArrayList&lt;File&gt; files = <strong class="jxr_keyword">new</strong> <a name="FileFilterWrapper" href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html#FileFilterWrapper">FileFilterWrapper</a>().list(srcDirString, suffix); <em class="jxr_comment">// 获取所有符合条件的文件</em>
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>  		Iterator&lt;File&gt; it = files.iterator();
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>  		<strong class="jxr_keyword">while</strong>(it.hasNext()) {
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>  			File tempFile = it.next();

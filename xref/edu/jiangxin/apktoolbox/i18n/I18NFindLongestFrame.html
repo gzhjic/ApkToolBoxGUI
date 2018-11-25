@@ -38,12 +38,12 @@
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> edu.jiangxin.apktoolbox.swing.extend.JEasyFrame;
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NFindLongestFrame</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html">JEasyFrame</a> {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="I18NFindLongestFrame" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NFindLongestFrame">I18NFindLongestFrame</a> <strong class="jxr_keyword">extends</strong> <a name="JEasyFrame" href="../../../../edu/jiangxin/apktoolbox/swing/extend/JEasyFrame.html#JEasyFrame">JEasyFrame</a> {
 <a class="jxr_linenumber" name="L34" href="#L34">34</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">long</strong> serialVersionUID = 1L;
 <a class="jxr_linenumber" name="L35" href="#L35">35</a>  
 <a class="jxr_linenumber" name="L36" href="#L36">36</a>  	List&lt;I18NInfo&gt; infos = <strong class="jxr_keyword">new</strong> ArrayList&lt;I18NInfo&gt;();
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>  
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>  	<strong class="jxr_keyword">public</strong> <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NFindLongestFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  	<strong class="jxr_keyword">public</strong> <a name="I18NFindLongestFrame" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NFindLongestFrame">I18NFindLongestFrame</a>() <strong class="jxr_keyword">throws</strong> HeadlessException {
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>  		<strong class="jxr_keyword">super</strong>();
 <a class="jxr_linenumber" name="L40" href="#L40">40</a>  		setTitle(bundle.getString(<span class="jxr_string">"i18n.longest.title"</span>));
 <a class="jxr_linenumber" name="L41" href="#L41">41</a>  		setSize(600, 160);
@@ -198,7 +198,7 @@
 <a class="jxr_linenumber" name="L190" href="#L190">190</a> 					<strong class="jxr_keyword">if</strong> (value != <strong class="jxr_keyword">null</strong> &amp;&amp; value.equals(itemName)) {
 <a class="jxr_linenumber" name="L191" href="#L191">191</a> 						String text = child.getText();
 <a class="jxr_linenumber" name="L192" href="#L192">192</a> 						<strong class="jxr_keyword">if</strong> (text != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L193" href="#L193">193</a> 							I18NInfo info = <strong class="jxr_keyword">new</strong> <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NInfo</a>(getCanonicalPath(sourceFile), text, text.length());
+<a class="jxr_linenumber" name="L193" href="#L193">193</a> 							I18NInfo info = <strong class="jxr_keyword">new</strong> <a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a>(getCanonicalPath(sourceFile), text, text.length());
 <a class="jxr_linenumber" name="L194" href="#L194">194</a> 							infos.add(info);
 <a class="jxr_linenumber" name="L195" href="#L195">195</a> 							<strong class="jxr_keyword">break</strong>;
 <a class="jxr_linenumber" name="L196" href="#L196">196</a> 						}
@@ -209,12 +209,12 @@
 <a class="jxr_linenumber" name="L201" href="#L201">201</a> 
 <a class="jxr_linenumber" name="L202" href="#L202">202</a> 		}
 <a class="jxr_linenumber" name="L203" href="#L203">203</a> 		Collections.sort(infos, <strong class="jxr_keyword">new</strong> Comparator&lt;I18NInfo&gt;() {
-<a class="jxr_linenumber" name="L204" href="#L204">204</a> 			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compare(<a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NInfo</a> o1, <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NInfo</a> o2) {
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> 			<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compare(<a name="I18N<a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a>ef="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a> o1, <a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a> o2) {
 <a class="jxr_linenumber" name="L205" href="#L205">205</a> 				<strong class="jxr_keyword">return</strong> o2.length - o1.length;
 <a class="jxr_linenumber" name="L206" href="#L206">206</a> 			}
 <a class="jxr_linenumber" name="L207" href="#L207">207</a> 		});
 <a class="jxr_linenumber" name="L208" href="#L208">208</a> 
-<a class="jxr_linenumber" name="L209" href="#L209">209</a> 		<strong class="jxr_keyword">for</strong> (I18NInfo info : infos) {
+<a class="jxr_linenumber" name="L209" href="#L209">209</a> 		<strong class="jxr_keyword">for</strong> (<a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a> info : infos) {
 <a class="jxr_linenumber" name="L210" href="#L210">210</a> 			logger.info(<span class="jxr_string">"[length: "</span> + info.length + <span class="jxr_string">", text: "</span> + info.text + <span class="jxr_string">", path: "</span> + info.path + <span class="jxr_string">"]"</span>);
 <a class="jxr_linenumber" name="L211" href="#L211">211</a> 		}
 <a class="jxr_linenumber" name="L212" href="#L212">212</a> 		<strong class="jxr_keyword">return</strong> 0;
@@ -222,12 +222,12 @@
 <a class="jxr_linenumber" name="L214" href="#L214">214</a> 
 <a class="jxr_linenumber" name="L215" href="#L215">215</a> }
 <a class="jxr_linenumber" name="L216" href="#L216">216</a> 
-<a class="jxr_linenumber" name="L217" href="#L217">217</a> <strong class="jxr_keyword">class</strong> <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NInfo</a> {
+<a class="jxr_linenumber" name="L217" href="#L217">217</a> <strong class="jxr_keyword">class</strong> <a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a> {
 <a class="jxr_linenumber" name="L218" href="#L218">218</a> 	String path;
 <a class="jxr_linenumber" name="L219" href="#L219">219</a> 	String text;
 <a class="jxr_linenumber" name="L220" href="#L220">220</a> 	<strong class="jxr_keyword">int</strong> length;
 <a class="jxr_linenumber" name="L221" href="#L221">221</a> 
-<a class="jxr_linenumber" name="L222" href="#L222">222</a> 	<strong class="jxr_keyword">public</strong> <a href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html">I18NInfo</a>(String path, String text, <strong class="jxr_keyword">int</strong> length) {
+<a class="jxr_linenumber" name="L222" href="#L222">222</a> 	<strong class="jxr_keyword">public</strong> <a name="I18NInfo" href="../../../../edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.html#I18NInfo">I18NInfo</a>(String path, String text, <strong class="jxr_keyword">int</strong> length) {
 <a class="jxr_linenumber" name="L223" href="#L223">223</a> 		<strong class="jxr_keyword">this</strong>.path = path;
 <a class="jxr_linenumber" name="L224" href="#L224">224</a> 		<strong class="jxr_keyword">this</strong>.text = text;
 <a class="jxr_linenumber" name="L225" href="#L225">225</a> 		<strong class="jxr_keyword">this</strong>.length = length;

@@ -19,7 +19,7 @@
 <a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> org.apache.logging.log4j.LogManager;
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> org.apache.logging.log4j.Logger;
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>  
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../edu/jiangxin/apktoolbox/text/core/ClassVersionTools.html">ClassVersionTools</a> {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ClassVersionTools" href="../../../../../edu/jiangxin/apktoolbox/text/core/ClassVersionTools.html#ClassVersionTools">ClassVersionTools</a> {
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = LogManager.getLogger(ClassVersionTools.<strong class="jxr_keyword">class</strong>);
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> getClassVersion(String pathname) {
@@ -32,7 +32,7 @@
 <a class="jxr_linenumber" name="L24" href="#L24">24</a>  			logger.warn(<span class="jxr_string">"Can't find the target file or directory: "</span> + srcDirFile.getAbsolutePath());
 <a class="jxr_linenumber" name="L25" href="#L25">25</a>  			<strong class="jxr_keyword">return</strong>;
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>  		}
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  		ArrayList&lt;File&gt; arrayList = <strong class="jxr_keyword">new</strong> <a href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html">FileFilterWrapper</a>().list(pathname, <span class="jxr_string">".class"</span>);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  		ArrayList&lt;File&gt; arrayList = <strong class="jxr_keyword">new</strong> <a name="FileFilterWrapper" href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html#FileFilterWrapper">FileFilterWrapper</a>().list(pathname, <span class="jxr_string">".class"</span>);
 <a class="jxr_linenumber" name="L28" href="#L28">28</a>  		<strong class="jxr_keyword">if</strong> (arrayList.isEmpty()) {
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>  			logger.warn(<span class="jxr_string">"Can't find class file."</span>);
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  			<strong class="jxr_keyword">return</strong>;
@@ -94,7 +94,7 @@
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>  
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>  		FileProcess.copyDirectory(srcDirString, desDirString);
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>  
-<a class="jxr_linenumber" name="L89" href="#L89">89</a>  		ArrayList&lt;File&gt; arrayList = <strong class="jxr_keyword">new</strong> <a href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html">FileFilterWrapper</a>().list(desDirString, <span class="jxr_string">".class"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  		ArrayList&lt;File&gt; arrayList = <strong class="jxr_keyword">new</strong> <a name="FileFilterWrapper" href="../../../../../edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.html#FileFilterWrapper">FileFilterWrapper</a>().list(desDirString, <span class="jxr_string">".class"</span>);
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>  		Iterator&lt;File&gt; it = arrayList.iterator();
 <a class="jxr_linenumber" name="L91" href="#L91">91</a>  		<strong class="jxr_keyword">while</strong> (it.hasNext()) {
 <a class="jxr_linenumber" name="L92" href="#L92">92</a>  
