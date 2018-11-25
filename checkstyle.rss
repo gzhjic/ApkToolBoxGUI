@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2018</copyright>
     <item>
-      <title>File: 48,
-             Errors: 1283,
+      <title>File: 49,
+             Errors: 1288,
              Warnings: 0,
              Infos: 0
       </title>
@@ -44,48 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApktoolRebuildFrame.java">edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  19
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.swing.extend.JAutoCompleteComboBox.java">edu/jiangxin/apktoolbox/swing/extend/JAutoCompleteComboBox.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  42
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.EncoderDetector.java">edu/jiangxin/apktoolbox/text/core/EncoderDetector.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  9
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.OSPatternConvert.java">edu/jiangxin/apktoolbox/text/core/OSPatternConvert.java</a>
@@ -172,20 +130,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.zhconvert.ZHUtils.java">edu/jiangxin/apktoolbox/text/zhconvert/ZHUtils.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  14
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.EncodeConvertFrame.java">edu/jiangxin/apktoolbox/text/EncodeConvertFrame.java</a>
                 </td>
                 <td>
@@ -210,20 +154,6 @@ under the License.
                 </td>
                 <td>
                   29
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#apktoolbox_zh.properties">apktoolbox_zh.properties</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
                 </td>
               </tr>
                           <tr>
@@ -256,20 +186,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.monkey.Common.java">edu/jiangxin/apktoolbox/monkey/Common.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  69
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.utils.Utils.java">edu/jiangxin/apktoolbox/utils/Utils.java</a>
                 </td>
                 <td>
@@ -294,20 +210,6 @@ under the License.
                 </td>
                 <td>
                   14
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#apktoolbox_zh_CN.properties">apktoolbox_zh_CN.properties</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
                 </td>
               </tr>
                           <tr>
@@ -340,34 +242,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.help.AboutActionListener.java">edu/jiangxin/apktoolbox/help/AboutActionListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.FileFilterWrapper.java">edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  17
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.i18n.core.I18NRemoveItem.java">edu/jiangxin/apktoolbox/i18n/core/I18NRemoveItem.java</a>
                 </td>
                 <td>
@@ -382,20 +256,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.screenshot.ScreenShotFrame.java">edu/jiangxin/apktoolbox/screenshot/ScreenShotFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.EncodeConvertActionListener.java">edu/jiangxin/apktoolbox/text/EncodeConvertActionListener.java</a>
                 </td>
                 <td>
@@ -406,34 +266,6 @@ under the License.
                 </td>
                 <td>
                   5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.FileProcess.java">edu/jiangxin/apktoolbox/text/core/FileProcess.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  89
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.LineCount.java">edu/jiangxin/apktoolbox/text/core/LineCount.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  14
                 </td>
               </tr>
                           <tr>
@@ -466,20 +298,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApkSignerFrame.java">edu/jiangxin/apktoolbox/reverse/ApkSignerFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  25
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.AXMLPrinterActionListener.java">edu/jiangxin/apktoolbox/reverse/AXMLPrinterActionListener.java</a>
                 </td>
                 <td>
@@ -490,62 +308,6 @@ under the License.
                 </td>
                 <td>
                   4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.ClassVersionTools.java">edu/jiangxin/apktoolbox/text/core/ClassVersionTools.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  27
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.main.MainFrame.java">edu/jiangxin/apktoolbox/main/MainFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  28
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApkSignerActionListener.java">edu/jiangxin/apktoolbox/reverse/ApkSignerActionListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame.java">edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  36
                 </td>
               </tr>
                           <tr>
@@ -588,6 +350,20 @@ under the License.
                 </td>
                 <td>
                   411
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.Version.java">edu/jiangxin/apktoolbox/Version.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
                 </td>
               </tr>
                           <tr>
@@ -648,6 +424,258 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.AXMLPrinterFrame.java">edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApktoolRebuildFrame.java">edu/jiangxin/apktoolbox/reverse/ApktoolRebuildFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.swing.extend.JAutoCompleteComboBox.java">edu/jiangxin/apktoolbox/swing/extend/JAutoCompleteComboBox.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  42
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.EncoderDetector.java">edu/jiangxin/apktoolbox/text/core/EncoderDetector.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.zhconvert.ZHUtils.java">edu/jiangxin/apktoolbox/text/zhconvert/ZHUtils.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#apktoolbox_zh.properties">apktoolbox_zh.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.monkey.Common.java">edu/jiangxin/apktoolbox/monkey/Common.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  69
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#apktoolbox_zh_CN.properties">apktoolbox_zh_CN.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.help.AboutActionListener.java">edu/jiangxin/apktoolbox/help/AboutActionListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.FileFilterWrapper.java">edu/jiangxin/apktoolbox/text/core/FileFilterWrapper.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.screenshot.ScreenShotFrame.java">edu/jiangxin/apktoolbox/screenshot/ScreenShotFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  18
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.FileProcess.java">edu/jiangxin/apktoolbox/text/core/FileProcess.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  89
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.LineCount.java">edu/jiangxin/apktoolbox/text/core/LineCount.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApkSignerFrame.java">edu/jiangxin/apktoolbox/reverse/ApkSignerFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  25
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.text.core.ClassVersionTools.java">edu/jiangxin/apktoolbox/text/core/ClassVersionTools.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  27
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.main.MainFrame.java">edu/jiangxin/apktoolbox/main/MainFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  28
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.ApkSignerActionListener.java">edu/jiangxin/apktoolbox/reverse/ApkSignerActionListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.i18n.I18NFindLongestFrame.java">edu/jiangxin/apktoolbox/i18n/I18NFindLongestFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  36
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.monkey.MonkeyActionListener.java">edu/jiangxin/apktoolbox/monkey/MonkeyActionListener.java</a>
                 </td>
                 <td>
@@ -672,20 +700,6 @@ under the License.
                 </td>
                 <td>
                   6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#edu.jiangxin.apktoolbox.reverse.AXMLPrinterFrame.java">edu/jiangxin/apktoolbox/reverse/AXMLPrinterFrame.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  13
                 </td>
               </tr>
                           <tr>
