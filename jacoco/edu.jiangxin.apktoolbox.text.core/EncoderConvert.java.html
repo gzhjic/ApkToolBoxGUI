@@ -36,8 +36,8 @@ import java.util.Iterator;
 <span class="fc" id="L36">		File desFileFile = new File(desFileString);</span>
 
 <span class="fc" id="L38">		File parentDir = desFileFile.getParentFile();</span>
-<span class="fc bfc" id="L39" title="All 2 branches covered.">		if(!parentDir.exists()) {</span>
-<span class="fc" id="L40">			parentDir.mkdirs();</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">		if(!parentDir.exists()) {</span>
+<span class="nc" id="L40">			parentDir.mkdirs();</span>
 		}
 
 		//TODO see http://akini.mbnet.fi/java/unicodereader/
