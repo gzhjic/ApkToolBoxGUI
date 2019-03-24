@@ -6,56 +6,56 @@ import java.util.regex.Pattern;
 
 <span class="nc" id="L7">public class ZHUtils {</span>
 
-	public static String convert2Traditional(String in) {
-<span class="nc" id="L10">		return ZHConverter.convert(in, ZHConverter.TRADITIONAL);</span>
-	}
+    public static String convert2Traditional(String in) {
+<span class="nc" id="L10">        return ZHConverter.convert(in, ZHConverter.TRADITIONAL);</span>
+    }
 
-	public static String convert2Simplified(String in) {
-<span class="nc" id="L14">		return ZHConverter.convert(in, ZHConverter.SIMPLIFIED);</span>
-	}
+    public static String convert2Simplified(String in) {
+<span class="nc" id="L14">        return ZHConverter.convert(in, ZHConverter.SIMPLIFIED);</span>
+    }
 
-	public static boolean isTraditional(String in) {
+    public static boolean isTraditional(String in) {
 
-<span class="nc" id="L19">		ZHConverter converter = ZHConverter.getInstance(ZHConverter.SIMPLIFIED);</span>
-<span class="nc" id="L20">		Properties dict = converter.getDict();</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">		for (int i = 0; i &lt; in.length(); i++) {</span>
-<span class="nc" id="L22">			char c = in.charAt(i);</span>
-<span class="nc" id="L23">			String key = &quot;&quot; + c;</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">			if (dict.containsKey(key)) {</span>
-<span class="nc" id="L25">				return true;</span>
-			}
-		}
-<span class="nc" id="L28">		return false;</span>
-	}
+<span class="nc" id="L19">        ZHConverter converter = ZHConverter.getInstance(ZHConverter.SIMPLIFIED);</span>
+<span class="nc" id="L20">        Properties dict = converter.getDict();</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        for (int i = 0; i &lt; in.length(); i++) {</span>
+<span class="nc" id="L22">            char c = in.charAt(i);</span>
+<span class="nc" id="L23">            String key = &quot;&quot; + c;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">            if (dict.containsKey(key)) {</span>
+<span class="nc" id="L25">                return true;</span>
+            }
+        }
+<span class="nc" id="L28">        return false;</span>
+    }
 
-	public static boolean isContainsChinese(String str) {
+    public static boolean isContainsChinese(String str) {
 
-<span class="nc" id="L33">		String regEx = &quot;[\u4e00-\u9fa5]&quot;;</span>
-<span class="nc" id="L34">		Pattern pat = Pattern.compile(regEx);</span>
-<span class="nc" id="L35">		Matcher matcher = pat.matcher(str);</span>
-<span class="nc" id="L36">		boolean flg = false;</span>
-<span class="nc bnc" id="L37" title="All 2 branches missed.">		if (matcher.find()) {</span>
-<span class="nc" id="L38">			flg = true;</span>
-		}
-<span class="nc" id="L40">		return flg;</span>
-	}
+<span class="nc" id="L33">        String regEx = &quot;[\u4e00-\u9fa5]&quot;;</span>
+<span class="nc" id="L34">        Pattern pat = Pattern.compile(regEx);</span>
+<span class="nc" id="L35">        Matcher matcher = pat.matcher(str);</span>
+<span class="nc" id="L36">        boolean flg = false;</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (matcher.find()) {</span>
+<span class="nc" id="L38">            flg = true;</span>
+        }
+<span class="nc" id="L40">        return flg;</span>
+    }
 
-	public static boolean isAllChinese(String str) {
+    public static boolean isAllChinese(String str) {
 
-<span class="nc" id="L45">		boolean flag = true;</span>
-<span class="nc bnc" id="L46" title="All 4 branches missed.">		if (str == null || str.trim().isEmpty()) {</span>
-<span class="nc" id="L47">			return false;</span>
-		}
+<span class="nc" id="L45">        boolean flag = true;</span>
+<span class="nc bnc" id="L46" title="All 4 branches missed.">        if (str == null || str.trim().isEmpty()) {</span>
+<span class="nc" id="L47">            return false;</span>
+        }
 
-<span class="nc" id="L50">		int length = str.length();</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">		for (int i = 0; i &lt; length; i++) {</span>
-<span class="nc bnc" id="L52" title="All 2 branches missed.">			if (!isContainsChinese(str.substring(i, i + 1))) {</span>
-<span class="nc" id="L53">				flag = false;</span>
-<span class="nc" id="L54">				break;</span>
-			}
-		}
+<span class="nc" id="L50">        int length = str.length();</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (int i = 0; i &lt; length; i++) {</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            if (!isContainsChinese(str.substring(i, i + 1))) {</span>
+<span class="nc" id="L53">                flag = false;</span>
+<span class="nc" id="L54">                break;</span>
+            }
+        }
 
-<span class="nc" id="L58">		return flag;</span>
-	}
+<span class="nc" id="L58">        return flag;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

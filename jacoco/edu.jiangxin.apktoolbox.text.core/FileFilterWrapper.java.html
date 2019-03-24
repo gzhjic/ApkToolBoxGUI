@@ -7,80 +7,85 @@ import java.util.ArrayList;
 
 /**
  * 文件过滤器.
- * &lt;p style=&quot;text-indent:2em&quot;&gt;过滤出符合要求的目录或者文件夹。&lt;/p&gt;
+ * &lt;p style=&quot;text-indent:2em&quot;&gt;
+ * 过滤出符合要求的目录或者文件夹。
+ * &lt;/p&gt;
+ * 
  * @author jiangxin
  */
-<span class="fc" id="L13">public class FileFilterWrapper {</span>
+<span class="fc" id="L16">public class FileFilterWrapper {</span>
 
-<span class="fc" id="L15">	ArrayList&lt;File&gt; arrayList = new ArrayList&lt;File&gt;();</span>
+<span class="fc" id="L18">    ArrayList&lt;File&gt; arrayList = new ArrayList&lt;File&gt;();</span>
 
-	/**
-	 * 实现对指定文件或者目录的过滤
-	 * @param name 文件或者目录名称
-	 * @param suffix 指定后缀
-	 * @return 返回一个文件列表
-	 */
-	public ArrayList&lt;File&gt; list(String name, String suffix) {
+    /**
+     * 实现对指定文件或者目录的过滤
+     * 
+     * @param name   文件或者目录名称
+     * @param suffix 指定后缀
+     * @return 返回一个文件列表
+     */
+    public ArrayList&lt;File&gt; list(String name, String suffix) {
 
-		try {
-<span class="fc" id="L26">			File file = new File(name);</span>
-<span class="pc bpc" id="L27" title="1 of 2 branches missed.">			if (!file.exists()) {</span>
-<span class="nc" id="L28">				System.out.println(&quot;Can't find the file!&quot;);</span>
-<span class="nc" id="L29">				return null;</span>
-			}
+        try {
+<span class="fc" id="L30">            File file = new File(name);</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">            if (!file.exists()) {</span>
+<span class="nc" id="L32">                System.out.println(&quot;Can't find the file!&quot;);</span>
+<span class="nc" id="L33">                return null;</span>
+            }
 
-<span class="pc bpc" id="L32" title="1 of 2 branches missed.">			if (file.isDirectory()) { //如果是目录的话，将该目录下符合条件的文件加入ArrayList</span>
-<span class="fc" id="L33">				File[] list = file.listFiles(getFileExtensionFilter(suffix));</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">				for (int i = 0; i &lt; list.length; i++) {</span>
-<span class="pc bpc" id="L35" title="1 of 2 branches missed.">					if(list[i].isFile()) {</span>
-<span class="fc" id="L36">						arrayList.add(list[i]);</span>
-					}
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">            if (file.isDirectory()) { // 如果是目录的话，将该目录下符合条件的文件加入ArrayList</span>
+<span class="fc" id="L37">                File[] files = file.listFiles(getFileExtensionFilter(suffix));</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">                if (files != null) {</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                    for (int i = 0; i &lt; files.length; i++) {</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">                        if (files[i].isFile()) {</span>
+<span class="fc" id="L41">                            arrayList.add(files[i]);</span>
+                        }
 
-				}
+                    }
+                }
+<span class="fc" id="L46">                files = file.listFiles(getDirectoryFilter()); // 过滤出所有的目录</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">                if (files != null) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                    for (int i = 0; i &lt; files.length; i++) {</span>
+<span class="fc" id="L49">                        list(files[i].toString(), suffix);</span>
+                    }
+                }
+<span class="fc" id="L52">            } else { // 如果是文件的话，直接将该文件加入ArrayList</span>
+<span class="nc" id="L53">                arrayList.add(file);</span>
+            }
 
-<span class="fc" id="L41">				list = file.listFiles(getDirectoryFilter()); // 过滤出所有的目录</span>
+<span class="nc" id="L56">        } catch (Exception e) {</span>
+<span class="nc" id="L57">            System.out.println(e.toString());</span>
+<span class="fc" id="L58">        }</span>
+<span class="fc" id="L59">        return arrayList;</span>
 
-<span class="fc bfc" id="L43" title="All 2 branches covered.">				for (int i = 0; i &lt; list.length; i++) {</span>
-<span class="fc" id="L44">					list(list[i].toString(), suffix);</span>
-				}
+    }
 
-<span class="fc" id="L47">			} else { //如果是文件的话，直接将该文件加入ArrayList</span>
-<span class="nc" id="L48">				arrayList.add(file);</span>
-			}
+    private FilenameFilter getFileExtensionFilter(final String extension) {// 指定扩展名过滤
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (extension == null) { // 没有指定后缀，则返回该目录下所有的文件</span>
+<span class="fc" id="L65">            return new FilenameFilter() {</span>
 
-<span class="nc" id="L51">		} catch (Exception e) {</span>
-<span class="nc" id="L52">			System.out.println(e.toString());</span>
-<span class="fc" id="L53">		}</span>
-<span class="fc" id="L54">		return arrayList;</span>
+                @Override
+                public boolean accept(File dir, String name) {
+<span class="fc" id="L69">                    return true;</span>
+                }
+            };
+        } else { // 指定后缀，则返回该目录下拥有这些后缀的文件
+<span class="fc" id="L73">            return new FilenameFilter() {</span>
+                public boolean accept(File file, String name) {
+<span class="fc" id="L75">                    boolean ret = name.endsWith(extension);</span>
+<span class="fc" id="L76">                    return ret;</span>
+                }
+            };
+        }
 
-	}
+    }
 
-	private FilenameFilter getFileExtensionFilter(final String extension) {// 指定扩展名过滤
-<span class="fc bfc" id="L59" title="All 2 branches covered.">		if (extension == null) { //没有指定后缀，则返回该目录下所有的文件</span>
-<span class="fc" id="L60">			return new FilenameFilter() {</span>
-
-				@Override
-				public boolean accept(File dir, String name) {
-<span class="fc" id="L64">					return true;</span>
-				}
-			};
-		} else { //指定后缀，则返回该目录下拥有这些后缀的文件
-<span class="fc" id="L68">			return new FilenameFilter() {</span>
-				public boolean accept(File file, String name) {
-<span class="fc" id="L70">					boolean ret = name.endsWith(extension);</span>
-<span class="fc" id="L71">					return ret;</span>
-				}
-			};
-		}
-
-	}
-
-	private FileFilter getDirectoryFilter() { // 得到所有的目录
-<span class="fc" id="L79">		return new FileFilter() {</span>
-			public boolean accept(File file) {
-<span class="fc" id="L81">				return file.isDirectory();// 关键判断点</span>
-			}
-		};
-	}
+    private FileFilter getDirectoryFilter() { // 得到所有的目录
+<span class="fc" id="L84">        return new FileFilter() {</span>
+            public boolean accept(File file) {
+<span class="fc" id="L86">                return file.isDirectory();// 关键判断点</span>
+            }
+        };
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
