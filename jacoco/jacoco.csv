@@ -1,109 +1,98 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,EasyFrame.new WindowAdapter() {...},26,0,0,0,5,0,2,0,2,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,AutoCompleter,138,0,22,0,37,0,17,0,6,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,NumberPlainDocument,58,0,10,0,13,0,7,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,JEasyFrame.new WindowAdapter() {...},26,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,JAutoCompleteComboBox,85,0,4,0,26,0,11,0,9,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,ScrollBasicComboBoxUI.new BasicComboPopup() {...},15,0,0,0,2,0,2,0,2,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,ScrollBasicComboBoxUI,12,0,0,0,3,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,JEasyFrame,47,0,0,0,10,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OSConvertFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OSConvertFrame.new MouseAdapter() {...},108,0,4,0,24,0,4,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OSConvertFrame,180,0,0,0,40,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertActionListener,15,0,0,0,6,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertFrame.new MouseAdapter() {...},60,0,6,0,15,0,5,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertFrame.new MouseAdapter() {...},174,0,6,0,33,0,5,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertFrame.new ItemListener() {...},23,0,2,0,5,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OSConvertActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertFrame,338,0,4,0,70,0,3,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.main,MainFrame.new AbstractListModel() {...},35,0,0,0,4,0,3,0,3,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,AutoCompleteComboBox,85,0,4,0,26,0,11,0,9,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,EasyPanel,29,0,0,0,6,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.swing.extend,EasyFrame,47,0,0,0,10,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.zhconvert,ZhConverter,229,0,20,0,54,0,17,0,7,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.zhconvert,ZhUtils,97,0,14,0,27,0,13,0,6,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OsConvertPanel.new MouseAdapter() {...},108,0,4,0,24,0,4,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OsConvertPanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,OsConvertPanel,168,0,0,0,36,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertPanel.new ItemListener() {...},23,0,2,0,5,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertPanel.new MouseAdapter() {...},60,0,6,0,15,0,5,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertPanel.new MouseAdapter() {...},174,0,6,0,33,0,5,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text,EncodeConvertPanel,313,0,4,0,65,0,3,0,1,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.main,MainFrame.new Runnable() {...},15,0,0,0,7,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.main,MainFrame,472,0,0,0,94,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.zhconvert,ZHUtils,97,0,14,0,27,0,13,0,6,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.zhconvert,ZHConverter,223,0,20,0,52,0,17,0,7,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},41,0,2,0,8,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},439,0,38,0,66,0,21,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},52,0,0,0,11,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},37,0,4,0,7,0,4,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},31,0,2,0,7,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,ThreadExcuteMonkey,16,0,0,0,8,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.ThreadExcuteTime,600,0,18,0,80,0,13,0,4,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.Dialog2.new ActionListener() {...},14,0,0,0,3,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},15,0,0,0,4,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.new ActionListener() {...},30,0,0,0,7,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame.Dialog2,88,0,0,0,17,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyFrame,1257,0,20,0,237,0,21,0,11,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,Common,6,0,0,0,2,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,Utils,284,0,28,0,92,0,22,0,8,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,KeyVerify,51,0,4,0,18,0,4,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.main,MainFrame.ChangePanelListener,57,0,0,0,12,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.main,MainFrame,580,0,0,0,95,0,9,0,9,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,Utils,342,0,36,0,109,0,29,0,11,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,KeyVerify,46,0,4,0,19,0,4,0,2,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,StreamHandler,67,0,8,0,24,0,7,0,3,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.utils,Constants,3,0,0,0,1,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotFrame,204,0,0,0,45,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotFrame.new MouseAdapter() {...},13,0,0,0,4,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotFrame.new MouseAdapter() {...},200,0,10,0,39,0,7,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotFrame.new Transferable() {...},29,0,2,0,6,0,5,0,4,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotFrame.new MouseAdapter() {...},48,0,2,0,12,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenshotActionListener,13,0,0,0,5,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.ExcuteButtonActionListener,418,0,34,0,58,0,19,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,ExcuteMonkeyRunnable,16,0,0,0,8,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.Dialog2,88,0,0,0,17,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ItemListener() {...},20,0,2,0,5,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ActionListener() {...},30,0,0,0,7,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ActionListener() {...},37,0,4,0,7,0,4,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ActionListener() {...},52,0,0,0,11,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ActionListener() {...},31,0,2,0,7,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.new ActionListener() {...},41,0,2,0,8,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.Dialog2.new ActionListener() {...},14,0,0,0,3,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel,1198,0,20,0,230,0,21,0,11,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.monkey,MonkeyPanel.CountdownRunnable,597,0,18,0,79,0,13,0,4,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel,319,0,0,0,63,0,5,0,5,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel.ScreenshotButtonMouseAdapter,210,0,8,0,40,0,6,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel.new Transferable() {...},29,0,2,0,6,0,5,0,4,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel.new MouseAdapter() {...},46,0,2,0,12,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel.new TransferHandler() {...},55,0,4,0,13,0,5,0,3,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.screenshot,ScreenShotPanel.new MouseAdapter() {...},13,0,0,0,4,0,2,0,2,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.help,ContributeActionListener,20,0,0,0,9,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.help,AboutActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.help,AboutFrame,125,0,6,0,35,0,4,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.help,CheckUpdateActionListener,168,0,10,0,59,0,11,0,6,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.help,FeedbackActionListener,20,0,0,0,9,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.help,CheckUpdateActionListener,180,0,10,0,63,0,11,0,6,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.help,AboutPanel,105,0,6,0,30,0,4,0,1,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,ClassVersionTools,104,225,11,17,32,51,12,6,1,3
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,FileFilterWrapper.new FilenameFilter() {...},0,8,0,0,0,2,0,2,0,2
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,FileFilterWrapper.new FilenameFilter() {...},0,16,0,0,0,3,0,2,0,2
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,FileFilterWrapper.new FileFilter() {...},0,9,0,0,0,2,0,2,0,2
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,OsPatternConvert,98,311,17,31,23,66,21,20,6,11
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderConvert,51,147,7,9,15,33,8,7,3,4
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,OSPatternConvert,98,311,17,31,23,66,21,20,6,11
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,LineCount,156,0,10,0,38,0,10,0,5,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector.new Runnable() {...},15,56,1,1,4,13,1,2,0,2
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector.new Runnable() {...},15,60,2,4,5,14,2,3,0,2
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector.new Runnable() {...},13,48,1,1,4,13,1,2,0,2
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector.new Runnable() {...},14,52,2,4,5,14,2,3,0,2
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,FileProcess,228,175,37,11,54,34,26,8,6,4
-APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector,54,110,9,7,12,21,8,3,1,2
+APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,EncoderDetector,54,108,9,7,12,23,8,4,1,3
 APKToolBoxGUI,edu.jiangxin.apktoolbox.text.core,FileFilterWrapper,15,93,5,11,5,21,5,7,0,4
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerFrame,296,0,0,0,61,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodeFrame,201,0,0,0,43,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AXMLPrinterFrame,160,0,0,0,34,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AXMLPrinterFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AXMLPrinterFrame.new MouseAdapter() {...},220,0,12,0,53,0,8,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AXMLPrinterFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,JDActionListener,54,0,0,0,14,0,3,0,3,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildFrame,188,0,0,0,40,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerFrame.new MouseAdapter() {...},50,0,0,0,7,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerFrame.new MouseAdapter() {...},281,0,10,0,69,0,7,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,APKFileFilter,13,0,0,0,4,0,3,0,3,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,JADXActionListener,60,0,0,0,14,0,3,0,3,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildFrame.new MouseAdapter() {...},49,0,2,0,13,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildFrame.new MouseAdapter() {...},248,0,10,0,58,0,7,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodeActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AXMLPrinterActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodeFrame.new MouseAdapter() {...},204,0,12,0,48,0,8,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodeFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodeFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,JadxActionListener,60,0,0,0,14,0,3,0,3,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodePanel.new MouseAdapter() {...},204,0,12,0,48,0,8,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodePanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodePanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolDecodePanel,189,0,0,0,39,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AxmlPrinterPanel,148,0,0,0,30,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildPanel.new MouseAdapter() {...},49,0,2,0,13,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildPanel.new MouseAdapter() {...},248,0,10,0,58,0,7,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerPanel.ScreenshotButtonMouseAdapter,295,0,10,0,66,0,8,0,3,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildPanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerPanel.RecoverButtonMouseAdapter,42,0,0,0,7,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkFileFilter,13,0,0,0,4,0,3,0,3,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerPanel,498,0,0,0,97,0,7,0,7,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AxmlPrinterPanel.new MouseAdapter() {...},220,0,12,0,53,0,8,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerPanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApkSignerPanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,ApktoolRebuildPanel,176,0,0,0,36,0,1,0,1,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AxmlPrinterPanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,AxmlPrinterPanel.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.reverse,JdActionListener,54,0,0,0,14,0,3,0,3,0
 APKToolBoxGUI,edu.jiangxin.apktoolbox,Version,3,0,0,0,1,0,1,0,1,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NInfo,34,0,0,0,6,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestFrame,315,0,16,0,67,0,11,0,3,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestFrame.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestFrame.new Comparator() {...},12,0,0,0,2,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NFindLongestFrame.new MouseAdapter() {...},161,0,8,0,36,0,6,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NRemoveActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NRemoveFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NRemoveFrame.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NRemoveFrame.new MouseAdapter() {...},104,0,6,0,26,0,5,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NRemoveFrame,279,0,6,0,54,0,5,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddActionListener,13,0,0,0,5,0,2,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddFrame,715,0,36,0,158,0,25,0,7,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddFrame.new MouseAdapter() {...},41,0,2,0,11,0,3,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddFrame.new MouseAdapter() {...},219,0,18,0,46,0,11,0,2,0
-APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18NAddFrame.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nAddPanel,825,0,36,0,178,0,29,0,11,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nFindLongestPanel.new MouseAdapter() {...},160,0,8,0,36,0,6,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nFindLongestPanel.new Comparator() {...},12,0,0,0,2,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nFindLongestPanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nFindLongestPanel.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nRemovePanel,351,0,6,0,67,0,8,0,5,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nAddPanel.new MouseAdapter() {...},217,0,18,0,46,0,11,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nAddPanel.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nAddPanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nAddPanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nRemovePanel.new MouseAdapter() {...},103,0,6,0,26,0,5,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nRemovePanel.new MouseAdapter() {...},39,0,2,0,11,0,3,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nRemovePanel.new FileFilter() {...},11,0,0,0,2,0,2,0,2,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nFindLongestPanel,387,0,16,0,80,0,14,0,6,0
+APKToolBoxGUI,edu.jiangxin.apktoolbox.i18n,I18nInfo,34,0,0,0,6,0,2,0,2,0

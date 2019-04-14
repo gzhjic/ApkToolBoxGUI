@@ -5,7 +5,8 @@ import javax.swing.text.*;
 /**
  * 实现JTextfield只能输入数字并限制长度
  * 
- * @author Administrator
+ * @author jiangxin
+ * @author 2019-03-24
  *
  */
 public class NumberPlainDocument extends PlainDocument {
@@ -15,25 +16,26 @@ public class NumberPlainDocument extends PlainDocument {
     private int limit;
 
     public NumberPlainDocument(int limit) {
-<span class="nc" id="L18">        super();</span>
-<span class="nc" id="L19">        this.limit = limit;</span>
-<span class="nc" id="L20">    }</span>
-
+<span class="nc" id="L19">        super();</span>
+<span class="nc" id="L20">        this.limit = limit;</span>
+<span class="nc" id="L21">    }</span>
+    
+    @Override
     public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
-<span class="nc bnc" id="L23" title="All 2 branches missed.">        if (str == null) {</span>
-<span class="nc" id="L24">            return;</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if (str == null) {</span>
+<span class="nc" id="L26">            return;</span>
         }
-<span class="nc bnc" id="L26" title="All 2 branches missed.">        if ((getLength() + str.length()) &lt;= limit) {</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        if ((getLength() + str.length()) &lt;= limit) {</span>
 
-<span class="nc" id="L28">            char[] upper = str.toCharArray();</span>
-<span class="nc" id="L29">            int length = 0;</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">            for (int i = 0; i &lt; upper.length; i++) {</span>
-<span class="nc bnc" id="L31" title="All 4 branches missed.">                if (upper[i] &gt;= '0' &amp;&amp; upper[i] &lt;= '9') {</span>
-<span class="nc" id="L32">                    upper[length++] = upper[i];</span>
+<span class="nc" id="L30">            char[] upper = str.toCharArray();</span>
+<span class="nc" id="L31">            int length = 0;</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">            for (int i = 0; i &lt; upper.length; i++) {</span>
+<span class="nc bnc" id="L33" title="All 4 branches missed.">                if (upper[i] &gt;= '0' &amp;&amp; upper[i] &lt;= '9') {</span>
+<span class="nc" id="L34">                    upper[length++] = upper[i];</span>
                 }
             }
-<span class="nc" id="L35">            super.insertString(offset, new String(upper, 0, length), attr);</span>
+<span class="nc" id="L37">            super.insertString(offset, new String(upper, 0, length), attr);</span>
         }
-<span class="nc" id="L37">    }</span>
+<span class="nc" id="L39">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

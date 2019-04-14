@@ -7,20 +7,25 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-<span class="nc" id="L10">public class ContributeActionListener implements ActionListener {</span>
+/**
+ * @author jiangxin
+ * @author 2018-09-30
+ *
+ */
+<span class="nc" id="L15">public class ContributeActionListener implements ActionListener {</span>
 
     @Override
     public void actionPerformed(ActionEvent e) {
         URI uri;
         try {
-<span class="nc" id="L16">            uri = new URI(&quot;https://github.com/jiangxincode/ApkToolBoxGUI&quot;);</span>
-<span class="nc" id="L17">            Desktop.getDesktop().browse(uri);</span>
-<span class="nc" id="L18">        } catch (URISyntaxException ex) {</span>
-<span class="nc" id="L19">            ex.printStackTrace();</span>
-<span class="nc" id="L20">        } catch (IOException ex) {</span>
-<span class="nc" id="L21">            ex.printStackTrace();</span>
-<span class="nc" id="L22">        }</span>
-<span class="nc" id="L23">    }</span>
+<span class="nc" id="L21">            uri = new URI(&quot;https://github.com/jiangxincode/ApkToolBoxGUI&quot;);</span>
+<span class="nc" id="L22">            Desktop.getDesktop().browse(uri);</span>
+<span class="nc" id="L23">        } catch (URISyntaxException ex) {</span>
+<span class="nc" id="L24">            ex.printStackTrace();</span>
+<span class="nc" id="L25">        } catch (IOException ex) {</span>
+<span class="nc" id="L26">            ex.printStackTrace();</span>
+<span class="nc" id="L27">        }</span>
+<span class="nc" id="L28">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -12,60 +12,62 @@ import java.io.LineNumberReader;
  * 文件行数统计
  * 
  * @author jiangxin
+ * @author 2018-09-09
  */
-<span class="nc" id="L16">public class LineCount {</span>
+<span class="nc" id="L17">public class LineCount {</span>
     public static void main(String[] args) throws IOException {
-<span class="nc" id="L18">        String fileName = &quot;temp/linux.txt&quot;;</span>
-<span class="nc" id="L19">        long time = System.currentTimeMillis();</span>
-<span class="nc" id="L20">        System.out.println(&quot;LineNumberReader&quot; + getTotalLines(fileName));</span>
-<span class="nc" id="L21">        System.out.println(System.currentTimeMillis() - time);</span>
-<span class="nc" id="L22">        time = System.currentTimeMillis();</span>
-<span class="nc" id="L23">        System.out.println(&quot;BufferedReader&quot; + getTotalLines2(fileName));</span>
-<span class="nc" id="L24">        System.out.println(System.currentTimeMillis() - time);</span>
-<span class="nc" id="L25">        time = System.currentTimeMillis();</span>
-<span class="nc" id="L26">        System.out.println(&quot;BufferedInputStream&quot; + count(fileName));</span>
-<span class="nc" id="L27">        System.out.println(System.currentTimeMillis() - time);</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L19">        String fileName = &quot;temp/linux.txt&quot;;</span>
+<span class="nc" id="L20">        long time = System.currentTimeMillis();</span>
+<span class="nc" id="L21">        System.out.println(&quot;LineNumberReader&quot; + getTotalLines(fileName));</span>
+<span class="nc" id="L22">        System.out.println(System.currentTimeMillis() - time);</span>
+<span class="nc" id="L23">        time = System.currentTimeMillis();</span>
+<span class="nc" id="L24">        System.out.println(&quot;BufferedReader&quot; + getTotalLines2(fileName));</span>
+<span class="nc" id="L25">        System.out.println(System.currentTimeMillis() - time);</span>
+<span class="nc" id="L26">        time = System.currentTimeMillis();</span>
+<span class="nc" id="L27">        System.out.println(&quot;BufferedInputStream&quot; + count(fileName));</span>
+<span class="nc" id="L28">        System.out.println(System.currentTimeMillis() - time);</span>
+<span class="nc" id="L29">    }</span>
 
     public static int getTotalLines(String fileName) throws IOException {
         // 目前仅支持UTF-8
-<span class="nc" id="L32">        LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream(fileName), &quot;UTF-8&quot;));</span>
-<span class="nc" id="L33">        String strLine = reader.readLine();</span>
-<span class="nc" id="L34">        int totalLines = 0;</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        while (strLine != null) {</span>
-<span class="nc" id="L36">            totalLines++;</span>
-<span class="nc" id="L37">            strLine = reader.readLine();</span>
+<span class="nc" id="L33">        LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream(fileName), &quot;UTF-8&quot;));</span>
+<span class="nc" id="L34">        String strLine = reader.readLine();</span>
+<span class="nc" id="L35">        int totalLines = 0;</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        while (strLine != null) {</span>
+<span class="nc" id="L37">            totalLines++;</span>
+<span class="nc" id="L38">            strLine = reader.readLine();</span>
         }
-<span class="nc" id="L39">        reader.close();</span>
-<span class="nc" id="L40">        return totalLines;</span>
+<span class="nc" id="L40">        reader.close();</span>
+<span class="nc" id="L41">        return totalLines;</span>
     }
 
     public static int getTotalLines2(String fileName) throws IOException {
         // 目前仅支持UTF-8
-<span class="nc" id="L45">        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), &quot;UTF-8&quot;));</span>
-<span class="nc" id="L46">        String strLine = in.readLine();</span>
-<span class="nc" id="L47">        int totalLines = 0;</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        while (strLine != null) {</span>
-<span class="nc" id="L49">            totalLines++;</span>
-<span class="nc" id="L50">            strLine = in.readLine();</span>
+<span class="nc" id="L46">        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), &quot;UTF-8&quot;));</span>
+<span class="nc" id="L47">        String strLine = in.readLine();</span>
+<span class="nc" id="L48">        int totalLines = 0;</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        while (strLine != null) {</span>
+<span class="nc" id="L50">            totalLines++;</span>
+<span class="nc" id="L51">            strLine = in.readLine();</span>
         }
-<span class="nc" id="L52">        in.close();</span>
-<span class="nc" id="L53">        return totalLines;</span>
+<span class="nc" id="L53">        in.close();</span>
+<span class="nc" id="L54">        return totalLines;</span>
     }
 
     public static int count(String filename) throws IOException {
-<span class="nc" id="L57">        InputStream is = new BufferedInputStream(new FileInputStream(filename));</span>
-<span class="nc" id="L58">        byte[] c = new byte[1024];</span>
-<span class="nc" id="L59">        int count = 0;</span>
-<span class="nc" id="L60">        int readChars = 0;</span>
-<span class="nc bnc" id="L61" title="All 2 branches missed.">        while ((readChars = is.read(c)) != -1) {</span>
-<span class="nc bnc" id="L62" title="All 2 branches missed.">            for (int i = 0; i &lt; readChars; ++i) {</span>
-<span class="nc bnc" id="L63" title="All 2 branches missed.">                if (c[i] == '\n')</span>
-<span class="nc" id="L64">                    ++count;</span>
+<span class="nc" id="L58">        InputStream is = new BufferedInputStream(new FileInputStream(filename));</span>
+<span class="nc" id="L59">        byte[] c = new byte[1024];</span>
+<span class="nc" id="L60">        int count = 0;</span>
+<span class="nc" id="L61">        int readChars = 0;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        while ((readChars = is.read(c)) != -1) {</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">            for (int i = 0; i &lt; readChars; ++i) {</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">                if (c[i] == '\n') {</span>
+<span class="nc" id="L65">                    ++count;</span>
+                }
             }
         }
-<span class="nc" id="L67">        is.close();</span>
-<span class="nc" id="L68">        return count;</span>
+<span class="nc" id="L69">        is.close();</span>
+<span class="nc" id="L70">        return count;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApkSignerPanel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">APKToolBoxGUI</a> &gt; <a href="index.source.html" class="el_package">edu.jiangxin.apktoolbox.reverse</a> &gt; <span class="el_source">ApkSignerPanel.java</span></div><h1>ApkSignerPanel.java</h1><pre class="source lang-java linenums">package edu.jiangxin.apktoolbox.reverse;
+
+import java.awt.HeadlessException;
+import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import org.apache.commons.lang3.StringUtils;
+
+import edu.jiangxin.apktoolbox.swing.extend.EasyPanel;
+import edu.jiangxin.apktoolbox.utils.Constants;
+import edu.jiangxin.apktoolbox.utils.StreamHandler;
+import edu.jiangxin.apktoolbox.utils.Utils;
+
+/**
+ * @author jiangxin
+ * @author 2019-04-12
+ *
+ */
+public class ApkSignerPanel extends EasyPanel {
+
+    private static final long serialVersionUID = 1L;
+    
+    private static final int PANEL_WIDTH = Constants.DEFAULT_WIDTH - 50;
+
+    private static final int PANEL_HIGHT = 230;
+    
+    private static final int CHILD_PANEL_HIGHT = 30;
+    
+    private static final int CHILD_PANEL_LEFT_WIDTH = 600;
+    
+    private static final int CHILD_PANEL_RIGHT_WIDTH = 130;
+
+    private JPanel apkPathPanel;
+
+    private JTextField apkPathTextField;
+
+    private JButton apkPathButton;
+
+    private JPanel keyStorePathPanel;
+
+    private JTextField keyStorePathTextField;
+
+    private JButton keyStorePathButton;
+
+    private JPanel keyStorePasswordPanel;
+
+    private JPasswordField keyStorePasswordField;
+
+    private JLabel keyStorePasswordLable;
+
+    private JPanel aliasPanel;
+
+    private JTextField aliasTextField;
+
+    private JLabel aliasLable;
+
+    private JPanel aliasPasswordPanel;
+
+    private JPasswordField aliasPasswordField;
+
+    private JLabel aliasPasswordLable;
+
+    private JPanel operationPanel;
+
+    private JButton recoverButton;
+
+    private JButton sceenshotButton;
+
+    public ApkSignerPanel() throws HeadlessException {
+<span class="nc" id="L83">        super();</span>
+
+<span class="nc" id="L85">        BoxLayout boxLayout = new BoxLayout(this, BoxLayout.Y_AXIS);</span>
+<span class="nc" id="L86">        setLayout(boxLayout);</span>
+        
+<span class="nc" id="L88">        Utils.setJComponentSize(this, PANEL_WIDTH, PANEL_HIGHT);</span>
+
+<span class="nc" id="L90">        createApkPathPanel();</span>
+<span class="nc" id="L91">        add(apkPathPanel);</span>
+        
+<span class="nc" id="L93">        add(Box.createVerticalStrut(Constants.DEFAULT_Y_BORDER));</span>
+
+<span class="nc" id="L95">        createKeyStorePathPanel();</span>
+<span class="nc" id="L96">        add(keyStorePathPanel);</span>
+        
+<span class="nc" id="L98">        add(Box.createVerticalStrut(Constants.DEFAULT_Y_BORDER));</span>
+
+<span class="nc" id="L100">        createKeyStorePasswordPanel();</span>
+<span class="nc" id="L101">        add(keyStorePasswordPanel);</span>
+        
+<span class="nc" id="L103">        add(Box.createVerticalStrut(Constants.DEFAULT_Y_BORDER));</span>
+
+<span class="nc" id="L105">        createAliasPanel();</span>
+<span class="nc" id="L106">        add(aliasPanel);</span>
+        
+<span class="nc" id="L108">        add(Box.createVerticalStrut(Constants.DEFAULT_Y_BORDER));</span>
+
+<span class="nc" id="L110">        createAliasPasswordPanel();</span>
+<span class="nc" id="L111">        add(aliasPasswordPanel);</span>
+        
+<span class="nc" id="L113">        add(Box.createVerticalStrut(Constants.DEFAULT_Y_BORDER));</span>
+
+<span class="nc" id="L115">        createOptionPanel();</span>
+<span class="nc" id="L116">        add(operationPanel);</span>
+<span class="nc" id="L117">    }</span>
+
+    private void createOptionPanel() {
+<span class="nc" id="L120">        operationPanel = new JPanel();</span>
+<span class="nc" id="L121">        Utils.setJComponentSize(operationPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L122">        operationPanel.setLayout(new BoxLayout(operationPanel, BoxLayout.X_AXIS));</span>
+        
+<span class="nc" id="L124">        recoverButton = new JButton(&quot;recover&quot;);</span>
+<span class="nc" id="L125">        Utils.setJComponentSize(recoverButton, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L126">        recoverButton.addMouseListener(new RecoverButtonMouseAdapter());</span>
+
+<span class="nc" id="L128">        sceenshotButton = new JButton(&quot;apksigner&quot;);</span>
+<span class="nc" id="L129">        Utils.setJComponentSize(sceenshotButton, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L130">        sceenshotButton.addMouseListener(new ScreenshotButtonMouseAdapter());</span>
+
+<span class="nc" id="L132">        operationPanel.add(recoverButton);</span>
+<span class="nc" id="L133">        operationPanel.add(Box.createHorizontalStrut(Constants.DEFAULT_X_BORDER));</span>
+<span class="nc" id="L134">        operationPanel.add(sceenshotButton);</span>
+<span class="nc" id="L135">    }</span>
+
+    private void createAliasPasswordPanel() {
+<span class="nc" id="L138">        aliasPasswordPanel = new JPanel();</span>
+<span class="nc" id="L139">        Utils.setJComponentSize(keyStorePasswordPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L140">        aliasPasswordPanel.setLayout(new BoxLayout(aliasPasswordPanel, BoxLayout.X_AXIS));</span>
+        
+<span class="nc" id="L142">        aliasPasswordField = new JPasswordField();</span>
+<span class="nc" id="L143">        Utils.setJComponentSize(aliasPasswordField, CHILD_PANEL_LEFT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L144">        aliasPasswordField.setText(conf.getString(&quot;apksigner.alias.password&quot;));</span>
+        
+<span class="nc" id="L146">        aliasPasswordLable = new JLabel(&quot;Alias Password&quot;);</span>
+<span class="nc" id="L147">        Utils.setJComponentSize(aliasPasswordLable, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+        
+<span class="nc" id="L149">        aliasPasswordPanel.add(aliasPasswordField);</span>
+<span class="nc" id="L150">        aliasPasswordPanel.add(Box.createHorizontalGlue());</span>
+<span class="nc" id="L151">        aliasPasswordPanel.add(aliasPasswordLable);</span>
+<span class="nc" id="L152">    }</span>
+
+    private void createAliasPanel() {
+<span class="nc" id="L155">        aliasPanel = new JPanel();</span>
+<span class="nc" id="L156">        Utils.setJComponentSize(keyStorePasswordPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L157">        aliasPanel.setLayout(new BoxLayout(aliasPanel, BoxLayout.X_AXIS));</span>
+        
+<span class="nc" id="L159">        aliasTextField = new JTextField();</span>
+<span class="nc" id="L160">        Utils.setJComponentSize(aliasTextField, CHILD_PANEL_LEFT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L161">        aliasTextField.setText(conf.getString(&quot;apksigner.alias&quot;));</span>
+        
+<span class="nc" id="L163">        aliasLable = new JLabel(&quot;Alias&quot;);</span>
+<span class="nc" id="L164">        Utils.setJComponentSize(aliasLable, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+        
+<span class="nc" id="L166">        aliasPanel.add(aliasTextField);</span>
+<span class="nc" id="L167">        aliasPanel.add(Box.createHorizontalGlue());</span>
+<span class="nc" id="L168">        aliasPanel.add(aliasLable);</span>
+<span class="nc" id="L169">    }</span>
+
+    private void createKeyStorePasswordPanel() {
+<span class="nc" id="L172">        keyStorePasswordPanel = new JPanel();</span>
+<span class="nc" id="L173">        Utils.setJComponentSize(keyStorePasswordPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L174">        keyStorePasswordPanel.setLayout(new BoxLayout(keyStorePasswordPanel, BoxLayout.X_AXIS));</span>
+        
+<span class="nc" id="L176">        keyStorePasswordField = new JPasswordField();</span>
+<span class="nc" id="L177">        Utils.setJComponentSize(keyStorePasswordField, CHILD_PANEL_LEFT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L178">        keyStorePasswordField.setText(conf.getString(&quot;apksigner.keystore.password&quot;));</span>
+        
+<span class="nc" id="L180">        keyStorePasswordLable = new JLabel(&quot;KeyStore Password&quot;);</span>
+<span class="nc" id="L181">        Utils.setJComponentSize(keyStorePasswordLable, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+        
+<span class="nc" id="L183">        keyStorePasswordPanel.add(keyStorePasswordField);</span>
+<span class="nc" id="L184">        keyStorePasswordPanel.add(Box.createHorizontalGlue());</span>
+<span class="nc" id="L185">        keyStorePasswordPanel.add(keyStorePasswordLable);</span>
+<span class="nc" id="L186">    }</span>
+
+    private void createKeyStorePathPanel() {
+<span class="nc" id="L189">        keyStorePathPanel = new JPanel();</span>
+<span class="nc" id="L190">        Utils.setJComponentSize(keyStorePathPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L191">        keyStorePathPanel.setLayout(new BoxLayout(keyStorePathPanel, BoxLayout.X_AXIS));</span>
+        
+<span class="nc" id="L193">        keyStorePathTextField = new JTextField();</span>
+<span class="nc" id="L194">        Utils.setJComponentSize(keyStorePathTextField, CHILD_PANEL_LEFT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L195">        keyStorePathTextField.setText(conf.getString(&quot;apksigner.keystore.path&quot;));</span>
+
+<span class="nc" id="L197">        keyStorePathButton = new JButton(&quot;Select KeyStore&quot;);</span>
+<span class="nc" id="L198">        Utils.setJComponentSize(keyStorePathButton, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L199">        keyStorePathButton.addMouseListener(new MouseAdapter() {</span>
+            @Override
+            public void mousePressed(MouseEvent e) {
+<span class="nc" id="L202">                super.mousePressed(e);</span>
+<span class="nc" id="L203">                JFileChooser jfc = new JFileChooser();</span>
+<span class="nc" id="L204">                jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);</span>
+<span class="nc" id="L205">                jfc.setDialogTitle(&quot;select a keystore file&quot;);</span>
+<span class="nc" id="L206">                int ret = jfc.showDialog(new JLabel(), null);</span>
+<span class="nc bnc" id="L207" title="All 2 branches missed.">                switch (ret) {</span>
+                case JFileChooser.APPROVE_OPTION:
+<span class="nc" id="L209">                    File file = jfc.getSelectedFile();</span>
+<span class="nc" id="L210">                    keyStorePathTextField.setText(file.getAbsolutePath());</span>
+<span class="nc" id="L211">                    break;</span>
+                default:
+                    break;
+                }
+
+<span class="nc" id="L216">            }</span>
+        });
+
+<span class="nc" id="L219">        keyStorePathPanel.add(keyStorePathTextField);</span>
+<span class="nc" id="L220">        keyStorePathPanel.add(Box.createHorizontalGlue());</span>
+<span class="nc" id="L221">        keyStorePathPanel.add(keyStorePathButton);</span>
+<span class="nc" id="L222">    }</span>
+
+    private void createApkPathPanel() {
+<span class="nc" id="L225">        apkPathPanel = new JPanel();</span>
+<span class="nc" id="L226">        Utils.setJComponentSize(apkPathPanel, PANEL_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L227">        apkPathPanel.setLayout(new BoxLayout(apkPathPanel, BoxLayout.X_AXIS));</span>
+
+<span class="nc" id="L229">        apkPathTextField = new JTextField();</span>
+<span class="nc" id="L230">        Utils.setJComponentSize(apkPathTextField, CHILD_PANEL_LEFT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L231">        apkPathTextField.setText(conf.getString(&quot;apksigner.apk.path&quot;));</span>
+
+<span class="nc" id="L233">        apkPathButton = new JButton(&quot;Select APK&quot;);</span>
+<span class="nc" id="L234">        Utils.setJComponentSize(apkPathButton, CHILD_PANEL_RIGHT_WIDTH, CHILD_PANEL_HIGHT);</span>
+<span class="nc" id="L235">        apkPathButton.addMouseListener(new MouseAdapter() {</span>
+            @Override
+            public void mousePressed(MouseEvent e) {
+<span class="nc" id="L238">                super.mousePressed(e);</span>
+<span class="nc" id="L239">                JFileChooser jfc = new JFileChooser();</span>
+<span class="nc" id="L240">                jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);</span>
+<span class="nc" id="L241">                jfc.setDialogTitle(&quot;select a APK file&quot;);</span>
+<span class="nc" id="L242">                int ret = jfc.showDialog(new JLabel(), null);</span>
+<span class="nc bnc" id="L243" title="All 2 branches missed.">                switch (ret) {</span>
+                case JFileChooser.APPROVE_OPTION:
+<span class="nc" id="L245">                    File file = jfc.getSelectedFile();</span>
+<span class="nc" id="L246">                    apkPathTextField.setText(file.getAbsolutePath());</span>
+<span class="nc" id="L247">                    break;</span>
+                default:
+                    break;
+                }
+
+<span class="nc" id="L252">            }</span>
+        });
+
+<span class="nc" id="L255">        apkPathPanel.add(apkPathTextField);</span>
+<span class="nc" id="L256">        apkPathPanel.add(Box.createHorizontalGlue());</span>
+<span class="nc" id="L257">        apkPathPanel.add(apkPathButton);</span>
+<span class="nc" id="L258">    }</span>
+    
+<span class="nc" id="L260">    private final class RecoverButtonMouseAdapter extends MouseAdapter {</span>
+        @Override
+        public void mousePressed(MouseEvent e) {
+<span class="nc" id="L263">            super.mousePressed(e);</span>
+<span class="nc" id="L264">            keyStorePathTextField.setText(conf.getString(&quot;default.apksigner.keystore.path&quot;));</span>
+<span class="nc" id="L265">            keyStorePasswordField.setText(conf.getString(&quot;default.apksigner.keystore.password&quot;));</span>
+<span class="nc" id="L266">            aliasTextField.setText(conf.getString(&quot;default.apksigner.alias&quot;));</span>
+<span class="nc" id="L267">            aliasPasswordField.setText(&quot;default.apksigner.alias.password&quot;);</span>
+<span class="nc" id="L268">        }</span>
+    }
+
+<span class="nc" id="L271">    private final class ScreenshotButtonMouseAdapter extends MouseAdapter {</span>
+        private File apkFile;
+        private String apkPath;
+        private File keystoreFile;
+        private String keystorePath;
+        private String keystorePassword;
+        private String alias;
+        private String alisaPassword;
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+<span class="nc" id="L282">            super.mousePressed(e);</span>
+<span class="nc" id="L283">            apkFile = new File(apkPathTextField.getText());</span>
+<span class="nc bnc" id="L284" title="All 2 branches missed.">            if (!apkFile.exists()) {</span>
+<span class="nc" id="L285">                logger.error(&quot;srcFile is invalid&quot;);</span>
+<span class="nc" id="L286">                Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L287">                JOptionPane.showMessageDialog(ApkSignerPanel.this, &quot;apk file is invalid&quot;, &quot;ERROR&quot;,</span>
+                        JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L289">                apkPathTextField.requestFocus();</span>
+<span class="nc" id="L290">                return;</span>
+            }
+
+<span class="nc" id="L293">            keystoreFile = new File(keyStorePathTextField.getText());</span>
+<span class="nc bnc" id="L294" title="All 2 branches missed.">            if (!keystoreFile.exists()) {</span>
+<span class="nc" id="L295">                logger.error(&quot;keystoreFile is invalid&quot;);</span>
+<span class="nc" id="L296">                Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L297">                JOptionPane.showMessageDialog(ApkSignerPanel.this, &quot;keystore file is invalid&quot;, &quot;ERROR&quot;,</span>
+                        JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L299">                keyStorePathTextField.requestFocus();</span>
+<span class="nc" id="L300">                return;</span>
+            }
+            
+            try {
+<span class="nc" id="L304">                apkPath = apkFile.getCanonicalPath();</span>
+<span class="nc" id="L305">                keystorePath = keystoreFile.getCanonicalPath();</span>
+<span class="nc" id="L306">            } catch (IOException e2) {</span>
+<span class="nc" id="L307">                logger.error(&quot;getCanonicalPath fail&quot;);</span>
+<span class="nc" id="L308">                return;</span>
+<span class="nc" id="L309">            }</span>
+            
+<span class="nc" id="L311">            conf.setProperty(&quot;apksigner.apk.path&quot;, apkPath);</span>
+<span class="nc" id="L312">            conf.setProperty(&quot;apksigner.keystore.path&quot;, keystorePath);</span>
+
+<span class="nc" id="L314">            keystorePassword = keyStorePasswordField.getText();</span>
+<span class="nc bnc" id="L315" title="All 2 branches missed.">            if (StringUtils.isEmpty(keystorePassword)) {</span>
+<span class="nc" id="L316">                logger.error(&quot;keystorePassword is invalid&quot;);</span>
+<span class="nc" id="L317">                Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L318">                JOptionPane.showMessageDialog(ApkSignerPanel.this, &quot;keystorePassword is invalid&quot;, &quot;ERROR&quot;,</span>
+                        JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L320">                keyStorePasswordField.requestFocus();</span>
+<span class="nc" id="L321">                return;</span>
+            }
+<span class="nc" id="L323">            conf.setProperty(&quot;apksigner.keystore.password&quot;, keystorePassword);</span>
+
+<span class="nc" id="L325">            alias = aliasTextField.getText();</span>
+<span class="nc bnc" id="L326" title="All 2 branches missed.">            if (StringUtils.isEmpty(alias)) {</span>
+<span class="nc" id="L327">                logger.error(&quot;alias is invalid&quot;);</span>
+<span class="nc" id="L328">                Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L329">                JOptionPane.showMessageDialog(ApkSignerPanel.this, &quot;alias is invalid&quot;, &quot;ERROR&quot;,</span>
+                        JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L331">                aliasTextField.requestFocus();</span>
+<span class="nc" id="L332">                return;</span>
+            }
+<span class="nc" id="L334">            conf.setProperty(&quot;apksigner.alias&quot;, alias);</span>
+
+<span class="nc" id="L336">            alisaPassword = aliasPasswordField.getText();</span>
+<span class="nc bnc" id="L337" title="All 2 branches missed.">            if (StringUtils.isEmpty(alisaPassword)) {</span>
+<span class="nc" id="L338">                logger.error(&quot;alisaPassword is invalid&quot;);</span>
+<span class="nc" id="L339">                Toolkit.getDefaultToolkit().beep();</span>
+<span class="nc" id="L340">                JOptionPane.showMessageDialog(ApkSignerPanel.this, &quot;alisaPassword is invalid&quot;, &quot;ERROR&quot;,</span>
+                        JOptionPane.ERROR_MESSAGE);
+<span class="nc" id="L342">                aliasPasswordField.requestFocus();</span>
+<span class="nc" id="L343">                return;</span>
+            }
+<span class="nc" id="L345">            conf.setProperty(&quot;apksigner.alias.password&quot;, alisaPassword);</span>
+
+            try {
+<span class="nc" id="L348">                String cmd = getCmd();</span>
+<span class="nc" id="L349">                logger.info(cmd);</span>
+<span class="nc" id="L350">                Process process = Runtime.getRuntime().exec(cmd);</span>
+<span class="nc" id="L351">                new StreamHandler(process.getInputStream(), 0).start();</span>
+<span class="nc" id="L352">                new StreamHandler(process.getErrorStream(), 1).start();</span>
+<span class="nc" id="L353">                process.waitFor();</span>
+<span class="nc" id="L354">                logger.info(&quot;apksigner finish&quot;);</span>
+<span class="nc" id="L355">            } catch (IOException | InterruptedException e1) {</span>
+<span class="nc" id="L356">                logger.error(&quot;apksigner fail&quot;, e);</span>
+<span class="nc" id="L357">            }</span>
+<span class="nc" id="L358">        }</span>
+
+        private String getCmd() {
+<span class="nc" id="L361">            StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L362">            sb.append(&quot;java -jar \&quot;-Duser.language=en\&quot; \&quot;-Dfile.encoding=UTF8\&quot;&quot;).append(&quot; \&quot;&quot;)</span>
+<span class="nc" id="L363">                    .append(Utils.getToolsPath()).append(File.separator).append(&quot;apksigner.jar\&quot;&quot;)</span>
+<span class="nc" id="L364">                    .append(&quot; -keystore &quot;).append(keystorePath).append(&quot; -pswd &quot;).append(keystorePassword)</span>
+<span class="nc" id="L365">                    .append(&quot; -alias &quot;).append(alias).append(&quot; -aliaspswd &quot;).append(alisaPassword).append(&quot; &quot;)</span>
+<span class="nc" id="L366">                    .append(apkPath);</span>
+<span class="nc" id="L367">            return sb.toString();</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

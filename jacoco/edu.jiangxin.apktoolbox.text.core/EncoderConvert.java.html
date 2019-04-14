@@ -18,11 +18,13 @@ import org.apache.logging.log4j.Logger;
  * 文件编码转换的工具类.
  * 
  * @author jiangxin
+ * @author 2018-09-09
  *
  */
-<span class="nc" id="L23">public class EncoderConvert {</span>
-    
-<span class="fc" id="L25">    private static final Logger logger = LogManager.getLogger(EncoderDetector.class.getSimpleName());</span>
+<span class="nc" id="L24">public class EncoderConvert {</span>
+
+    private static final String TMP_SUFFIX = &quot;.temp&quot;;
+<span class="fc" id="L27">    private static final Logger logger = LogManager.getLogger(EncoderDetector.class.getSimpleName());</span>
 
     /**
      * 实现对文件的编码转换.
@@ -35,41 +37,41 @@ import org.apache.logging.log4j.Logger;
      */
     public static void encodeFile(String srcFileString, String srcEncoder, String desFileString, String desEncoder)
             throws IOException {
-<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (srcFileString.equals(desFileString)) {</span>
-<span class="nc" id="L39">            srcFileString = srcFileString + &quot;.temp&quot;;</span>
-<span class="nc" id="L40">            FileProcess.copyFile(desFileString, srcFileString);</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if (srcFileString.equals(desFileString)) {</span>
+<span class="nc" id="L41">            srcFileString = srcFileString + EncoderConvert.TMP_SUFFIX;</span>
+<span class="nc" id="L42">            FileProcess.copyFile(desFileString, srcFileString);</span>
         }
-<span class="fc" id="L42">        File srcFileFile = new File(srcFileString);</span>
-<span class="fc" id="L43">        File desFileFile = new File(desFileString);</span>
+<span class="fc" id="L44">        File srcFileFile = new File(srcFileString);</span>
+<span class="fc" id="L45">        File desFileFile = new File(desFileString);</span>
 
-<span class="fc" id="L45">        File parentDir = desFileFile.getParentFile();</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (!parentDir.exists()) {</span>
-<span class="fc" id="L47">            boolean success = parentDir.mkdirs();</span>
-<span class="pc bpc" id="L48" title="1 of 2 branches missed.">            if (!success) {</span>
-<span class="nc" id="L49">                logger.error(&quot;delete srcFileFile failed&quot;);</span>
-<span class="nc" id="L50">                return;</span>
+<span class="fc" id="L47">        File parentDir = desFileFile.getParentFile();</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (!parentDir.exists()) {</span>
+<span class="fc" id="L49">            boolean success = parentDir.mkdirs();</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">            if (!success) {</span>
+<span class="nc" id="L51">                logger.error(&quot;delete srcFileFile failed&quot;);</span>
+<span class="nc" id="L52">                return;</span>
             }
         }
 
         // TODO see http://akini.mbnet.fi/java/unicodereader/
-<span class="fc" id="L55">        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(srcFileFile), srcEncoder));</span>
-<span class="fc" id="L56">        BufferedWriter writer = new BufferedWriter(</span>
+<span class="fc" id="L57">        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(srcFileFile), srcEncoder));</span>
+<span class="fc" id="L58">        BufferedWriter writer = new BufferedWriter(</span>
                 new OutputStreamWriter(new FileOutputStream(desFileFile), desEncoder));
-<span class="fc" id="L58">        int ch = 0;</span>
-<span class="fc bfc" id="L59" title="All 2 branches covered.">        while ((ch = reader.read()) != -1) {</span>
-<span class="fc" id="L60">            writer.write(ch);</span>
+<span class="fc" id="L60">        int ch = 0;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        while ((ch = reader.read()) != -1) {</span>
+<span class="fc" id="L62">            writer.write(ch);</span>
         }
-<span class="fc" id="L62">        reader.close();</span>
-<span class="fc" id="L63">        writer.close();</span>
-<span class="fc" id="L64">        System.out.println(&quot;转换完成！&quot;);</span>
-<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if (srcFileString.equals(desFileString + &quot;.temp&quot;)) {</span>
-<span class="nc" id="L66">            System.out.println(&quot;here&quot;);</span>
-<span class="nc" id="L67">            boolean success = srcFileFile.delete();</span>
-<span class="nc bnc" id="L68" title="All 2 branches missed.">            if (!success) {</span>
-<span class="nc" id="L69">                logger.error(&quot;delete srcFileFile failed&quot;);</span>
+<span class="fc" id="L64">        reader.close();</span>
+<span class="fc" id="L65">        writer.close();</span>
+<span class="fc" id="L66">        System.out.println(&quot;转换完成！&quot;);</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">        if (srcFileString.equals(desFileString + EncoderConvert.TMP_SUFFIX)) {</span>
+<span class="nc" id="L68">            System.out.println(&quot;here&quot;);</span>
+<span class="nc" id="L69">            boolean success = srcFileFile.delete();</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if (!success) {</span>
+<span class="nc" id="L71">                logger.error(&quot;delete srcFileFile failed&quot;);</span>
             }
         }
-<span class="fc" id="L72">    }</span>
+<span class="fc" id="L74">    }</span>
 
     /**
      * 实现文件的编码转换. see {@link #encodeFile(String, String, String, String)}
@@ -80,8 +82,8 @@ import org.apache.logging.log4j.Logger;
      * @throws IOException
      */
     public static void encodeFile(String fileString, String srcEncoder, String desEncoder) throws IOException {
-<span class="nc" id="L83">        encodeFile(fileString, srcEncoder, fileString, desEncoder);</span>
-<span class="nc" id="L84">    }</span>
+<span class="nc" id="L85">        encodeFile(fileString, srcEncoder, fileString, desEncoder);</span>
+<span class="nc" id="L86">    }</span>
 
     /**
      * 实现文件夹中特定文件的批量编码转换. see {@link #encodeFile(String, String, String, String)}
@@ -96,19 +98,20 @@ import org.apache.logging.log4j.Logger;
     public static void encodeDir(String srcDirString, String srcEncoder, String desDirString, String desEncoder,
             String suffix) throws IOException {
         // File srcDirFile = new File(srcDirString);
-<span class="fc" id="L99">        File desDirFile = new File(desDirString);</span>
-<span class="fc" id="L100">        ArrayList&lt;File&gt; files = new FileFilterWrapper().list(srcDirString, suffix); // 获取所有符合条件的文件</span>
-<span class="fc" id="L101">        Iterator&lt;File&gt; it = files.iterator();</span>
-<span class="fc bfc" id="L102" title="All 2 branches covered.">        while (it.hasNext()) {</span>
-<span class="fc" id="L103">            File tempFile = it.next();</span>
-<span class="fc" id="L104">            String desFileString = desDirFile.getAbsolutePath() + File.separator + tempFile.getName();</span>
-<span class="fc" id="L105">            String srcFileString = tempFile.getAbsolutePath().toString();</span>
-<span class="fc" id="L106">            System.out.println(srcFileString);</span>
-<span class="fc" id="L107">            System.out.println(desFileString);</span>
-<span class="fc" id="L108">            encodeFile(srcFileString, srcEncoder, desFileString, desEncoder);</span>
-<span class="fc" id="L109">            System.out.println(&quot;转换完成！&quot;);</span>
-<span class="fc" id="L110">        }</span>
-<span class="fc" id="L111">    }</span>
+<span class="fc" id="L101">        File desDirFile = new File(desDirString);</span>
+        // 获取所有符合条件的文件
+<span class="fc" id="L103">        ArrayList&lt;File&gt; files = new FileFilterWrapper().list(srcDirString, suffix);</span>
+<span class="fc" id="L104">        Iterator&lt;File&gt; it = files.iterator();</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">        while (it.hasNext()) {</span>
+<span class="fc" id="L106">            File tempFile = it.next();</span>
+<span class="fc" id="L107">            String desFileString = desDirFile.getAbsolutePath() + File.separator + tempFile.getName();</span>
+<span class="fc" id="L108">            String srcFileString = tempFile.getAbsolutePath().toString();</span>
+<span class="fc" id="L109">            System.out.println(srcFileString);</span>
+<span class="fc" id="L110">            System.out.println(desFileString);</span>
+<span class="fc" id="L111">            encodeFile(srcFileString, srcEncoder, desFileString, desEncoder);</span>
+<span class="fc" id="L112">            System.out.println(&quot;转换完成！&quot;);</span>
+<span class="fc" id="L113">        }</span>
+<span class="fc" id="L114">    }</span>
 
     /**
      * 实现文件夹中特定文件的批量编码转换. see {@link #encodeFile(String, String, String, String)}
@@ -121,8 +124,8 @@ import org.apache.logging.log4j.Logger;
      */
     public static void encodeDir(String srcDirString, String srcEncoder, String desDirString, String desEncoder)
             throws IOException {
-<span class="fc" id="L124">        encodeDir(srcDirString, srcEncoder, desDirString, desEncoder, null);</span>
-<span class="fc" id="L125">    }</span>
+<span class="fc" id="L127">        encodeDir(srcDirString, srcEncoder, desDirString, desEncoder, null);</span>
+<span class="fc" id="L128">    }</span>
 
     /**
      * 实现文件列表批量编码转换. see {@link #encodeFile(String, String, String, String)}
@@ -132,10 +135,10 @@ import org.apache.logging.log4j.Logger;
      * @throws IOException
      */
     public static void encodeFiles(ArrayList&lt;File&gt; files, String fromEncoder, String toEncoder) throws IOException {
-<span class="nc" id="L135">        Iterator&lt;File&gt; it = files.iterator();</span>
-<span class="nc bnc" id="L136" title="All 2 branches missed.">        while (it.hasNext()) {</span>
-<span class="nc" id="L137">            encodeFile(it.next().getAbsolutePath(), fromEncoder, toEncoder);</span>
+<span class="nc" id="L138">        Iterator&lt;File&gt; it = files.iterator();</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">        while (it.hasNext()) {</span>
+<span class="nc" id="L140">            encodeFile(it.next().getAbsolutePath(), fromEncoder, toEncoder);</span>
         }
-<span class="nc" id="L139">    }</span>
+<span class="nc" id="L142">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

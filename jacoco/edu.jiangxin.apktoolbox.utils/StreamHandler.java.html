@@ -8,46 +8,51 @@ import java.io.InputStreamReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * @author jiangxin
+ * @author 2018-09-01
+ *
+ */
 public class StreamHandler extends Thread {
 
-<span class="nc" id="L13">    private static final Logger logger = LogManager.getLogger(StreamHandler.class);</span>
+<span class="nc" id="L18">    private static final Logger logger = LogManager.getLogger(StreamHandler.class);</span>
     private InputStream inputStream;
     private int type;
 
-<span class="nc" id="L17">    public StreamHandler(InputStream is, int type) {</span>
-<span class="nc" id="L18">        this.inputStream = is;</span>
-<span class="nc" id="L19">        this.type = type;</span>
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L22">    public StreamHandler(InputStream is, int type) {</span>
+<span class="nc" id="L23">        this.inputStream = is;</span>
+<span class="nc" id="L24">        this.type = type;</span>
+<span class="nc" id="L25">    }</span>
 
     @Override
     public void run() {
-<span class="nc" id="L24">        InputStreamReader isr = null;</span>
-<span class="nc" id="L25">        BufferedReader br = null;</span>
+<span class="nc" id="L29">        InputStreamReader isr = null;</span>
+<span class="nc" id="L30">        BufferedReader br = null;</span>
         try {
-<span class="nc" id="L27">            isr = new InputStreamReader(inputStream, &quot;UTF-8&quot;);</span>
-<span class="nc" id="L28">            br = new BufferedReader(isr);</span>
-<span class="nc" id="L29">            String line = null;</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">                if (type == 0) {</span>
-<span class="nc" id="L32">                    logger.info(line);</span>
+<span class="nc" id="L32">            isr = new InputStreamReader(inputStream, &quot;UTF-8&quot;);</span>
+<span class="nc" id="L33">            br = new BufferedReader(isr);</span>
+<span class="nc" id="L34">            String line = null;</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">                if (type == 0) {</span>
+<span class="nc" id="L37">                    logger.info(line);</span>
                 } else {
-<span class="nc" id="L34">                    logger.error(line);</span>
+<span class="nc" id="L39">                    logger.error(line);</span>
                 }
             }
-<span class="nc" id="L37">        } catch (IOException e) {</span>
-<span class="nc" id="L38">            logger.error(&quot;read bis error&quot;, e);</span>
+<span class="nc" id="L42">        } catch (IOException e) {</span>
+<span class="nc" id="L43">            logger.error(&quot;read bis error&quot;, e);</span>
         } finally {
             try {
-<span class="nc bnc" id="L41" title="All 2 branches missed.">                if (br != null) {</span>
-<span class="nc" id="L42">                    br.close();</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">                if (br != null) {</span>
+<span class="nc" id="L47">                    br.close();</span>
                 }
-<span class="nc bnc" id="L44" title="All 2 branches missed.">                if (isr != null) {</span>
-<span class="nc" id="L45">                    isr.close();</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">                if (isr != null) {</span>
+<span class="nc" id="L50">                    isr.close();</span>
                 }
-<span class="nc" id="L47">            } catch (IOException ex) {</span>
-<span class="nc" id="L48">                logger.error(&quot;close error&quot;, ex);</span>
-<span class="nc" id="L49">            }</span>
+<span class="nc" id="L52">            } catch (IOException ex) {</span>
+<span class="nc" id="L53">                logger.error(&quot;close error&quot;, ex);</span>
+<span class="nc" id="L54">            }</span>
         }
-<span class="nc" id="L51">    }</span>
+<span class="nc" id="L56">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
